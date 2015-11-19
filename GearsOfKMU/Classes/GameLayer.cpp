@@ -16,6 +16,17 @@ GameLayer::~GameLayer()
 {
 }
 
+Scene* GameLayer::scene()
+{
+    auto scene = Scene::create();
+
+    auto layer = GameLayer::create();
+
+    scene->addChild(layer);
+
+    return scene;
+}
+
 bool GameLayer::init()
 {
     return true;
