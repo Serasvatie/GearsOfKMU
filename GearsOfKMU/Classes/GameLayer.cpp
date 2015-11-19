@@ -37,6 +37,11 @@ bool GameLayer::init()
     Size visibleSize = Director::getInstance()->getVisibleSize();
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
  
+    // KMU Logo
+    logo = Sprite::create("logo.png");
+    logo->setPosition(Vec2(origin.x + logo->getContentSize().width + 50, origin.y + visibleSize.height - 50));
+    this->addChild(logo, 1);
+    
     // Upgrade button
     auto upgrade = MenuItemImage::create( "UpgradeButtonNormal.png", "UpgradeButtonSelected", CC_CALLBACK_1(GameLayer::UpgradeMenu, this));
     upgrade->setPosition(Vec2(origin.x + upgrade->getContentSize().width + 50, origin.y + visibleSize.height * 0.5));
