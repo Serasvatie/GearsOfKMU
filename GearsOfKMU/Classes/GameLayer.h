@@ -16,6 +16,11 @@ using namespace cocos2d;
 class GameLayer : public Layer
 {
 private:
+    
+    void UpgradeMenu(Ref *pSender);
+    void StatisticMenu(Ref *pSender);
+    void ResetMenu(Ref *pSender);
+    
 public:
     virtual ~GameLayer();
     GameLayer();
