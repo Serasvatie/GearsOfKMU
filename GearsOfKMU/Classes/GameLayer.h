@@ -23,6 +23,7 @@ public:
     static cocos2d::Scene* scene();
     
     virtual bool init();
+    
     virtual bool onTouchBegan(Touch* touch, Event* event);
     virtual void update (float dt);
 };
