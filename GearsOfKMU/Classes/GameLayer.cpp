@@ -43,21 +43,21 @@ bool GameLayer::init()
     this->addChild(logo, 1);
     
     // Upgrade button
-    auto upgrade = MenuItemImage::create( "UpgradeButtonNormal.png", "UpgradeButtonSelected", CC_CALLBACK_1(GameLayer::UpgradeMenu, this));
+    auto upgrade = MenuItemImage::create( "Button Upgrade Normal.png", "Button Upgrade Selected.png", CC_CALLBACK_1(GameLayer::UpgradeMenu, this));
     upgrade->setPosition(Vec2(origin.x + upgrade->getContentSize().width + 50, origin.y + visibleSize.height * 0.5));
     auto Upgrade = Menu::create(upgrade, NULL);
     Upgrade->setPosition(Vec2::ZERO);
     this->addChild(Upgrade, 1);
     
     //Statistic buttom
-    auto stat = MenuItemImage::create( "StatisticButtonNormal.png", "StatisticButtonSelected", CC_CALLBACK_1(GameLayer::StatisticMenu, this));
+    auto stat = MenuItemImage::create( "Button StatisticNormal.png", "Button Statistic Selected.png", CC_CALLBACK_1(GameLayer::StatisticMenu, this));
     stat->setPosition(Vec2(origin.x + stat->getContentSize().width + 50, origin.y + visibleSize.height * 0.4));
     auto Stat = Menu::create(stat, NULL);
     Stat->setPosition(Vec2::ZERO);
     this->addChild(Stat, 1);
 
     //ResetButton
-    auto reset = MenuItemImage::create( "ResetButtonNormal.png", "ResetButtonSelected", CC_CALLBACK_1(GameLayer::ResetMenu, this));
+    auto reset = MenuItemImage::create( "Button Reset Normal.png", "Button Reset Selected.png", CC_CALLBACK_1(GameLayer::ResetMenu, this));
     reset->setPosition(Vec2(origin.x + stat->getContentSize().width + 50, origin.y + visibleSize.height * 0.4));
     auto Reset = Menu::create(reset, NULL);
     Reset->setPosition(Vec2::ZERO);
