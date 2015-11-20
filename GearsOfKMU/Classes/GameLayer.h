@@ -10,14 +10,24 @@
 #define __GearsOfKMU__GameLayer__
 
 #include "cocos2d.h"
+#include <list>
+#include "Student.h"
 
-using namespace cocos2d;
+USING_NS_CC;
 
 class GameLayer : public Layer
 {
 private:
     
     Sprite *logo;
+    
+    std::list<Student*> NumberOfStudent;
+    float StudentBySec;
+    
+    int Money;
+    float MoneyBySecond;
+    
+    int Knowledge;
     
     void UpgradeMenu(Ref *pSender);
     void StatisticMenu(Ref *pSender);
