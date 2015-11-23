@@ -7,7 +7,7 @@
 
 class Major : public cocos2d::Sprite
 {
-	private:	
+	private:
 	
 	public:
 	

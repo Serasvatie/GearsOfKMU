@@ -46,17 +46,33 @@ bool HelloWorld::init()
 
     // KMU Logo
     logo = Sprite::create("logo.png");
-    logo->setPosition(200, 200);
     logo->setPosition(Vec2(origin.x + logo->getContentSize().width - 30, origin.y + visibleSize.height - 50));
     this->addChild(logo);
-/*
+    
+    // Upgrade button
+    auto upgrade = MenuItemImage::create( "Button Upgrade Normal.png", "Button Upgrade Selected.png", CC_CALLBACK_1(HelloWorld::UpgradeMenu, this));
+    upgrade->setPosition(Vec2(origin.x + upgrade->getContentSize().width + 15, origin.y + visibleSize.height * 0.5));
+    upgrade->setScale(upgrade->getScale() * 2.0f);
+    auto Upgrade = Menu::create(upgrade, NULL);
+    Upgrade->setPosition(Vec2::ZERO);
+    this->addChild(Upgrade, 0);
+    
+    //Statistic buttom
+    auto stat = MenuItemImage::create( "Button StatisticNormal.png", "Button Statistic Selected.png", CC_CALLBACK_1(HelloWorld::StatisticMenu, this));
+    stat->setPosition(Vec2(origin.x + stat->getContentSize().width + 15, origin.y + visibleSize.height * 0.35));
+    stat->setScale(stat->getScale() * 2.0f);
+    auto Stat = Menu::create(stat, NULL);
+    Stat->setPosition(Vec2::ZERO);
+    this->addChild(Stat, 0);
+
     //ResetButton
     auto reset = MenuItemImage::create( "Button Reset Normal.png", "Button Reset Selected.png", CC_CALLBACK_1(HelloWorld::ResetMenu, this));
-    reset->setPosition(Vec2(origin.x + reset->getContentSize().width + 50, origin.y + visibleSize.height * 0.4));
+    reset->setPosition(Vec2(origin.x + reset->getContentSize().width + 15, origin.y + visibleSize.height * 0.2));
+    reset->setScale(reset->getScale() * 2.0f);
     auto Reset = Menu::create(reset, NULL);
     Reset->setPosition(Vec2::ZERO);
     this->addChild(Reset, 0);
-*/
+
     return true;
 }
 
