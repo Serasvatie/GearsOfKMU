@@ -73,6 +73,12 @@ bool HelloWorld::init()
     Reset->setPosition(Vec2::ZERO);
     this->addChild(Reset, 0);
 
+    //UI Student
+    NBStudent = UI::setSpriteWithFile("StudentZone.png");
+    NBStudent->setPosition(Vec2(origin.x + 150, visibleSize.height - 15));
+    NBStudent->setLabelFirst("0", "fonts/arial.ttf", 20.0f);
+    NBStudent->setLabelSecond("0", "fonts/arial.ttf", 15.0f);
+    this->addChild(NBStudent,0);
     return true;
 }
 
@@ -83,7 +89,7 @@ bool HelloWorld::onTouchBegan(Touch *touch, Event *event)
 
 void HelloWorld::update(float dt)
 {
-    
+    NBStudent->updateLabel((int)dt,dt);
 }
 
 void HelloWorld::UpgradeMenu(Ref *pSender)

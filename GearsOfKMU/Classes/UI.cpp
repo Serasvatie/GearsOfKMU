@@ -22,24 +22,27 @@ UI* UI::setSpriteWithFile(const char *file)
 	return sprite = nullptr;
 }
 
-Label* UI::setLabelFirst(const std::string test, const std::string font, float size)
+cocos2d::Label* UI::setLabelFirst(const std::string test, const std::string font, float size)
 {
-	first = Label::createWithTTF(test, font, size);
-	auto pos = getPosition();
-	first->setPosition(Vec2(pos.x, pos.y));
+	this->first = cocos2d::Label::createWithTTF(test, font, size);
+	auto pos = this->getPosition();
+    this->first->setPosition(cocos2d::Vec2(50, 20));
+    this->addChild(first);
 	return first;
 }
 
-Label* UI::setLabelSecond(const std::string test, const std::string font, float size)
+cocos2d::Label* UI::setLabelSecond(const std::string test, const std::string font, float size)
 {
 	auto text = "+" + test + "/s";
-	second = Label::createWithTTF(text, font, size);
-	auto pos = getPosition();
-	second->setPosition(Vec2(pos.x, pos.y));
+	second = cocos2d::Label::createWithTTF(text, font, size);
+	auto pos = this->getPosition();
+    second->setPosition(cocos2d::Vec2(85, 15));
+    this->addChild(second);
 	return first;	
 }
 
-void UI::updateLabel()
+void UI::updateLabel(int first, float second)
 {
-	
+    this->first->setString(std::to_string(first));
+    this->second->setString(std::to_string(second));
 }

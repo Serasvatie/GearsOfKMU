@@ -3,10 +3,16 @@
 
 #include "cocos2d.h"
 #include "Student.h"
+#include "UI.h"
 
 class HelloWorld : public cocos2d::Layer
 {
+private:
     cocos2d::Sprite *logo;
+    
+    UI* NBStudent;
+    UI* NBMoney;
+    UI* NBKnowledge;
     
     std::list<Student*> NumberOfStudent;
     float StudentBySec;
