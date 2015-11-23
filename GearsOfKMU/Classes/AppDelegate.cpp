@@ -81,7 +81,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
     fileUtils->setSearchPaths(searchPath);
     
     // create a scene. it's an autorelease object
-    auto scene = GameLayer::scene();
+    auto scene = HelloWorld::createScene();
 
     // run
     director->runWithScene(scene);
