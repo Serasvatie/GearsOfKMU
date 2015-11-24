@@ -11,6 +11,10 @@ class Major : public cocos2d::Sprite
 	
 	public:
 	
+	bool unlock;
+	int MoneyToUnlock;
+	int KnowledgeToUnlock;
+	
 	int NbMaxStudent;
 	std::list<Student*> student;
 	

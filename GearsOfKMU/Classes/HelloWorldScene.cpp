@@ -75,10 +75,22 @@ bool HelloWorld::init()
 
     //UI Student
     NBStudent = UI::setSpriteWithFile("StudentZone.png");
-    NBStudent->setPosition(Vec2(origin.x + 150, visibleSize.height - 15));
+    NBStudent->setPosition(Vec2(origin.x + visibleSize.width * 0.35, visibleSize.height - 15));
     NBStudent->setLabelFirst("0", "fonts/arial.ttf", 20.0f);
     NBStudent->setLabelSecond("0", "fonts/arial.ttf", 15.0f);
     this->addChild(NBStudent,0);
+    //UI Money
+    NBMoney = UI::setSpriteWithFile("MoneyZone.png");
+    NBMoney->setPosition(Vec2(origin.x + visibleSize.width * 0.55, visibleSize.height - 15));
+    NBMoney->setLabelFirst("0", "fonts/arial.ttf", 20.0f);
+    NBMoney->setLabelSecond("0", "fonts/arial.ttf", 15.0f);
+    this->addChild(NBMoney,0);
+    //UI Knowledge
+    NBKnowledge = UI::setSpriteWithFile("KnowledgeZone.png");
+    NBKnowledge->setPosition(Vec2(origin.x + visibleSize.width * 0.75, visibleSize.height - 15));
+    NBKnowledge->setLabelFirst("0", "fonts/arial.ttf", 20.0f);
+    NBKnowledge->setLabelSecond("0", "fonts/arial.ttf", 15.0f);
+    this->addChild(NBKnowledge,0);
     return true;
 }
 
@@ -89,7 +101,6 @@ bool HelloWorld::onTouchBegan(Touch *touch, Event *event)
 
 void HelloWorld::update(float dt)
 {
-    NBStudent->updateLabel((int)dt,dt);
 }
 
 void HelloWorld::UpgradeMenu(Ref *pSender)
