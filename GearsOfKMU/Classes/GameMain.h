@@ -5,10 +5,11 @@
 #include "Student.h"
 #include "UI.h"
 
-class HelloWorld : public cocos2d::Layer
+class GameMain : public cocos2d::Layer
 {
 private:
     cocos2d::Sprite *logo;
+    cocos2d::Sprite *background;
     
     UI* NBStudent;
     UI* NBMoney;
@@ -27,8 +28,8 @@ private:
     void ResetMenu(Ref *pSender);
     
 public:
-    virtual ~HelloWorld();
-    HelloWorld();
+    virtual ~GameMain();
+    GameMain();
     
     static cocos2d::Scene* createScene();
     
@@ -38,7 +39,7 @@ public:
     virtual void update (float dt);
     
     // implement the "static create()" method manually
-    CREATE_FUNC(HelloWorld);
+    CREATE_FUNC(GameMain);
 };
 
 #endif // __HELLOWORLD_SCENE_H__

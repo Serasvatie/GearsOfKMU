@@ -58,6 +58,7 @@
 		521A8EAA19F11F5000D177D7 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 521A8EA819F11F5000D177D7 /* fonts */; };
 		52B47A471A53D09C004E4C60 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52B47A461A53D09B004E4C60 /* Security.framework */; };
 		8262943E1AAF051F00CB7CF7 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8262943D1AAF051F00CB7CF7 /* Security.framework */; };
+		84AF78841C056DA900FECEC4 /* MainGate.png in Resources */ = {isa = PBXBuildFile; fileRef = 84AF78831C056DA900FECEC4 /* MainGate.png */; };
 		84D763901BFD83E8002F3CEE /* Button Reset Normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 84D763891BFD83E8002F3CEE /* Button Reset Normal.png */; };
 		84D763911BFD83E8002F3CEE /* Button Reset Selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 84D7638A1BFD83E8002F3CEE /* Button Reset Selected.png */; };
 		84D763921BFD83E8002F3CEE /* Button Statistic Selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 84D7638B1BFD83E8002F3CEE /* Button Statistic Selected.png */; };
@@ -72,8 +73,7 @@
 		84EC67151BFE9B43001FC773 /* Plus Button.png in Resources */ = {isa = PBXBuildFile; fileRef = 84EC67121BFE9B43001FC773 /* Plus Button.png */; };
 		84EC67161BFE9B43001FC773 /* StudentZone.png in Resources */ = {isa = PBXBuildFile; fileRef = 84EC67131BFE9B43001FC773 /* StudentZone.png */; };
 		84FFDD951C02DD7600889B90 /* College.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84FFDD891C02DD7600889B90 /* College.cpp */; };
-		84FFDD961C02DD7600889B90 /* GameLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84FFDD8B1C02DD7600889B90 /* GameLayer.cpp */; };
-		84FFDD971C02DD7600889B90 /* HelloWorldScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84FFDD8D1C02DD7600889B90 /* HelloWorldScene.cpp */; };
+		84FFDD971C02DD7600889B90 /* GameMain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84FFDD8D1C02DD7600889B90 /* GameMain.cpp */; };
 		84FFDD981C02DD7600889B90 /* Major.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84FFDD8F1C02DD7600889B90 /* Major.cpp */; };
 		84FFDD991C02DD7600889B90 /* Student.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84FFDD911C02DD7600889B90 /* Student.cpp */; };
 		84FFDD9A1C02DD7600889B90 /* UI.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84FFDD931C02DD7600889B90 /* UI.cpp */; };
@@ -169,6 +169,7 @@
 		521A8EA819F11F5000D177D7 /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fonts; sourceTree = "<group>"; };
 		52B47A461A53D09B004E4C60 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.1.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
 		8262943D1AAF051F00CB7CF7 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		84AF78831C056DA900FECEC4 /* MainGate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MainGate.png; sourceTree = "<group>"; };
 		84D763891BFD83E8002F3CEE /* Button Reset Normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Button Reset Normal.png"; sourceTree = "<group>"; };
 		84D7638A1BFD83E8002F3CEE /* Button Reset Selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Button Reset Selected.png"; sourceTree = "<group>"; };
 		84D7638B1BFD83E8002F3CEE /* Button Statistic Selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Button Statistic Selected.png"; sourceTree = "<group>"; };
@@ -184,10 +185,8 @@
 		84EC67131BFE9B43001FC773 /* StudentZone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StudentZone.png; sourceTree = "<group>"; };
 		84FFDD891C02DD7600889B90 /* College.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = College.cpp; sourceTree = "<group>"; };
 		84FFDD8A1C02DD7600889B90 /* College.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = College.h; sourceTree = "<group>"; };
-		84FFDD8B1C02DD7600889B90 /* GameLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameLayer.cpp; sourceTree = "<group>"; };
-		84FFDD8C1C02DD7600889B90 /* GameLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameLayer.h; sourceTree = "<group>"; };
-		84FFDD8D1C02DD7600889B90 /* HelloWorldScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HelloWorldScene.cpp; sourceTree = "<group>"; };
-		84FFDD8E1C02DD7600889B90 /* HelloWorldScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelloWorldScene.h; sourceTree = "<group>"; };
+		84FFDD8D1C02DD7600889B90 /* GameMain.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameMain.cpp; sourceTree = "<group>"; };
+		84FFDD8E1C02DD7600889B90 /* GameMain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameMain.h; sourceTree = "<group>"; };
 		84FFDD8F1C02DD7600889B90 /* Major.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Major.cpp; sourceTree = "<group>"; };
 		84FFDD901C02DD7600889B90 /* Major.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Major.h; sourceTree = "<group>"; };
 		84FFDD911C02DD7600889B90 /* Student.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Student.cpp; sourceTree = "<group>"; };
@@ -324,6 +323,7 @@
 		46880B7519C43A67006E1F66 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				84AF78831C056DA900FECEC4 /* MainGate.png */,
 				84EC67111BFE9B43001FC773 /* MoneyZone.png */,
 				84EC67121BFE9B43001FC773 /* Plus Button.png */,
 				84EC67131BFE9B43001FC773 /* StudentZone.png */,
@@ -352,10 +352,8 @@
 			children = (
 				84FFDD891C02DD7600889B90 /* College.cpp */,
 				84FFDD8A1C02DD7600889B90 /* College.h */,
-				84FFDD8B1C02DD7600889B90 /* GameLayer.cpp */,
-				84FFDD8C1C02DD7600889B90 /* GameLayer.h */,
-				84FFDD8D1C02DD7600889B90 /* HelloWorldScene.cpp */,
-				84FFDD8E1C02DD7600889B90 /* HelloWorldScene.h */,
+				84FFDD8D1C02DD7600889B90 /* GameMain.cpp */,
+				84FFDD8E1C02DD7600889B90 /* GameMain.h */,
 				84FFDD8F1C02DD7600889B90 /* Major.cpp */,
 				84FFDD901C02DD7600889B90 /* Major.h */,
 				84FFDD911C02DD7600889B90 /* Student.cpp */,
@@ -518,6 +516,7 @@
 				84EC670F1BFE9B32001FC773 /* Knowledge.png in Resources */,
 				5087E78117EB970100C73F5D /* Icon-120.png in Resources */,
 				5087E78617EB970100C73F5D /* Icon-76.png in Resources */,
+				84AF78841C056DA900FECEC4 /* MainGate.png in Resources */,
 				84D763901BFD83E8002F3CEE /* Button Reset Normal.png in Resources */,
 				84EC670E1BFE9B32001FC773 /* Dollars.png in Resources */,
 				5087E77F17EB970100C73F5D /* Default@2x.png in Resources */,
@@ -576,13 +575,12 @@
 				84FFDD991C02DD7600889B90 /* Student.cpp in Sources */,
 				46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
-				84FFDD971C02DD7600889B90 /* HelloWorldScene.cpp in Sources */,
+				84FFDD971C02DD7600889B90 /* GameMain.cpp in Sources */,
 				84FFDD981C02DD7600889B90 /* Major.cpp in Sources */,
 				84FFDD9A1C02DD7600889B90 /* UI.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
 				84FFDD951C02DD7600889B90 /* College.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
-				84FFDD961C02DD7600889B90 /* GameLayer.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
