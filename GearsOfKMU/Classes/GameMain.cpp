@@ -1,8 +1,8 @@
-#include "HelloWorldScene.h"
+#include "GameMain.h"
 
 USING_NS_CC;
 
-HelloWorld::HelloWorld() :
+GameMain::GameMain() :
     NumberOfStudent(1000), StudentBySec(0.1), Money(1), MoneyBySecond(0),
     Knowledge(0)
 { 
@@ -13,16 +13,16 @@ HelloWorld::HelloWorld() :
     } 
 }
 
-HelloWorld::~HelloWorld()
+GameMain::~GameMain()
 { }
 
-Scene* HelloWorld::createScene()
+Scene* GameMain::createScene()
 {
     // 'scene' is an autorelease object
     auto scene = Scene::create();
     
     // 'layer' is an autorelease object
-    auto layer = HelloWorld::create();
+    auto layer = GameMain::create();
 
     // add layer as a child to scene
     scene->addChild(layer);
@@ -32,7 +32,7 @@ Scene* HelloWorld::createScene()
 }
 
 // on "init" you need to initialize your instance
-bool HelloWorld::init()
+bool GameMain::init()
 {
     //////////////////////////////
     // 1. super init first
@@ -56,7 +56,7 @@ bool HelloWorld::init()
     this->addChild(logo);
     
     // Upgrade button
-    auto upgrade = MenuItemImage::create( "Button Upgrade Normal.png", "Button Upgrade Selected.png", CC_CALLBACK_1(HelloWorld::UpgradeMenu, this));
+    auto upgrade = MenuItemImage::create( "Button Upgrade Normal.png", "Button Upgrade Selected.png", CC_CALLBACK_1(GameMain::UpgradeMenu, this));
     upgrade->setPosition(Vec2(origin.x + upgrade->getContentSize().width + 15, origin.y + visibleSize.height * 0.5));
     upgrade->setScale(upgrade->getScale() * 2.0f);
     auto Upgrade = Menu::create(upgrade, NULL);
@@ -64,7 +64,7 @@ bool HelloWorld::init()
     this->addChild(Upgrade, 0);
     
     //Statistic buttom
-    auto stat = MenuItemImage::create( "Button StatisticNormal.png", "Button Statistic Selected.png", CC_CALLBACK_1(HelloWorld::StatisticMenu, this));
+    auto stat = MenuItemImage::create( "Button StatisticNormal.png", "Button Statistic Selected.png", CC_CALLBACK_1(GameMain::StatisticMenu, this));
     stat->setPosition(Vec2(origin.x + stat->getContentSize().width + 15, origin.y + visibleSize.height * 0.35));
     stat->setScale(stat->getScale() * 2.0f);
     auto Stat = Menu::create(stat, NULL);
@@ -72,7 +72,7 @@ bool HelloWorld::init()
     this->addChild(Stat, 0);
 
     //ResetButton
-    auto reset = MenuItemImage::create( "Button Reset Normal.png", "Button Reset Selected.png", CC_CALLBACK_1(HelloWorld::ResetMenu, this));
+    auto reset = MenuItemImage::create( "Button Reset Normal.png", "Button Reset Selected.png", CC_CALLBACK_1(GameMain::ResetMenu, this));
     reset->setPosition(Vec2(origin.x + reset->getContentSize().width + 15, origin.y + visibleSize.height * 0.2));
     reset->setScale(reset->getScale() * 2.0f);
     auto Reset = Menu::create(reset, NULL);
@@ -100,26 +100,26 @@ bool HelloWorld::init()
     return true;
 }
 
-bool HelloWorld::onTouchBegan(Touch *touch, Event *event)
+bool GameMain::onTouchBegan(Touch *touch, Event *event)
 {
     return true;
 }
 
-void HelloWorld::update(float dt)
+void GameMain::update(float dt)
 {
 }
 
-void HelloWorld::UpgradeMenu(Ref *pSender)
+void GameMain::UpgradeMenu(Ref *pSender)
 {
     
 }
 
-void HelloWorld::StatisticMenu(Ref *pSender)
+void GameMain::StatisticMenu(Ref *pSender)
 {
 
 }
 
-void HelloWorld::ResetMenu(Ref *pSender)
+void GameMain::ResetMenu(Ref *pSender)
 {
     
 }

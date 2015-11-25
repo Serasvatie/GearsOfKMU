@@ -73,8 +73,7 @@
 		84EC67151BFE9B43001FC773 /* Plus Button.png in Resources */ = {isa = PBXBuildFile; fileRef = 84EC67121BFE9B43001FC773 /* Plus Button.png */; };
 		84EC67161BFE9B43001FC773 /* StudentZone.png in Resources */ = {isa = PBXBuildFile; fileRef = 84EC67131BFE9B43001FC773 /* StudentZone.png */; };
 		84FFDD951C02DD7600889B90 /* College.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84FFDD891C02DD7600889B90 /* College.cpp */; };
-		84FFDD961C02DD7600889B90 /* GameLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84FFDD8B1C02DD7600889B90 /* GameLayer.cpp */; };
-		84FFDD971C02DD7600889B90 /* HelloWorldScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84FFDD8D1C02DD7600889B90 /* HelloWorldScene.cpp */; };
+		84FFDD971C02DD7600889B90 /* GameMain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84FFDD8D1C02DD7600889B90 /* GameMain.cpp */; };
 		84FFDD981C02DD7600889B90 /* Major.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84FFDD8F1C02DD7600889B90 /* Major.cpp */; };
 		84FFDD991C02DD7600889B90 /* Student.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84FFDD911C02DD7600889B90 /* Student.cpp */; };
 		84FFDD9A1C02DD7600889B90 /* UI.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84FFDD931C02DD7600889B90 /* UI.cpp */; };
@@ -186,10 +185,8 @@
 		84EC67131BFE9B43001FC773 /* StudentZone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StudentZone.png; sourceTree = "<group>"; };
 		84FFDD891C02DD7600889B90 /* College.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = College.cpp; sourceTree = "<group>"; };
 		84FFDD8A1C02DD7600889B90 /* College.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = College.h; sourceTree = "<group>"; };
-		84FFDD8B1C02DD7600889B90 /* GameLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameLayer.cpp; sourceTree = "<group>"; };
-		84FFDD8C1C02DD7600889B90 /* GameLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameLayer.h; sourceTree = "<group>"; };
-		84FFDD8D1C02DD7600889B90 /* HelloWorldScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HelloWorldScene.cpp; sourceTree = "<group>"; };
-		84FFDD8E1C02DD7600889B90 /* HelloWorldScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelloWorldScene.h; sourceTree = "<group>"; };
+		84FFDD8D1C02DD7600889B90 /* GameMain.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameMain.cpp; sourceTree = "<group>"; };
+		84FFDD8E1C02DD7600889B90 /* GameMain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameMain.h; sourceTree = "<group>"; };
 		84FFDD8F1C02DD7600889B90 /* Major.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Major.cpp; sourceTree = "<group>"; };
 		84FFDD901C02DD7600889B90 /* Major.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Major.h; sourceTree = "<group>"; };
 		84FFDD911C02DD7600889B90 /* Student.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Student.cpp; sourceTree = "<group>"; };
@@ -355,10 +352,8 @@
 			children = (
 				84FFDD891C02DD7600889B90 /* College.cpp */,
 				84FFDD8A1C02DD7600889B90 /* College.h */,
-				84FFDD8B1C02DD7600889B90 /* GameLayer.cpp */,
-				84FFDD8C1C02DD7600889B90 /* GameLayer.h */,
-				84FFDD8D1C02DD7600889B90 /* HelloWorldScene.cpp */,
-				84FFDD8E1C02DD7600889B90 /* HelloWorldScene.h */,
+				84FFDD8D1C02DD7600889B90 /* GameMain.cpp */,
+				84FFDD8E1C02DD7600889B90 /* GameMain.h */,
 				84FFDD8F1C02DD7600889B90 /* Major.cpp */,
 				84FFDD901C02DD7600889B90 /* Major.h */,
 				84FFDD911C02DD7600889B90 /* Student.cpp */,
@@ -580,13 +575,12 @@
 				84FFDD991C02DD7600889B90 /* Student.cpp in Sources */,
 				46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
-				84FFDD971C02DD7600889B90 /* HelloWorldScene.cpp in Sources */,
+				84FFDD971C02DD7600889B90 /* GameMain.cpp in Sources */,
 				84FFDD981C02DD7600889B90 /* Major.cpp in Sources */,
 				84FFDD9A1C02DD7600889B90 /* UI.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
 				84FFDD951C02DD7600889B90 /* College.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
-				84FFDD961C02DD7600889B90 /* GameLayer.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
