@@ -26,7 +26,7 @@ cocos2d::Label* UI::setLabelFirst(const std::string test, const std::string font
 {
 	this->first = cocos2d::Label::createWithTTF(test, font, size);
 	auto pos = this->getPosition();
-    this->first->setPosition(cocos2d::Vec2(50, 20));
+    this->first->setPosition(cocos2d::Vec2(40, 20));
     this->addChild(first);
 	return first;
 }
@@ -36,7 +36,7 @@ cocos2d::Label* UI::setLabelSecond(const std::string test, const std::string fon
 	auto text = "+" + test + "/s";
 	second = cocos2d::Label::createWithTTF(text, font, size);
 	auto pos = this->getPosition();
-    second->setPosition(cocos2d::Vec2(85, 15));
+    second->setPosition(cocos2d::Vec2(80, 15));
     this->addChild(second);
 	return first;	
 }
@@ -44,5 +44,11 @@ cocos2d::Label* UI::setLabelSecond(const std::string test, const std::string fon
 void UI::updateLabel(int first, float second)
 {
     this->first->setString(std::to_string(first));
-    this->second->setString(std::to_string(second));
+    std::string text = "+" + std::to_string((int)(roundf(second))) + "/s";
+    this->second->setString(text);
+}
+
+void UI::updateLabel(int first)
+{
+    this->first->setString(std::to_string(first));
 }

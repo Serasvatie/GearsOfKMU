@@ -16,5 +16,6 @@ class UI : public cocos2d::Sprite
 	cocos2d::Label* setLabelFirst(const std::string test, const std::string font, float size);
 	cocos2d::Label* setLabelSecond(const std::string test, const std::string font, float size);
 	
-	void updateLabel(int, float);
+    void updateLabel(int, float);
+    void updateLabel(int);
 };

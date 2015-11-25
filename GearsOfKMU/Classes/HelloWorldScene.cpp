@@ -2,15 +2,8 @@
 
 USING_NS_CC;
 
-HelloWorld::HelloWorld() :
-    NumberOfStudent(1000), StudentBySec(0.1), Money(1), MoneyBySecond(0),
-    Knowledge(0)
+HelloWorld::HelloWorld()
 { 
-    for (int i = 0 ; i < 10 ; i++)
-    {
-        Student* stu = new Student(60.0f);
-        NumberOfStudent.push_back(stu);
-    } 
 }
 
 HelloWorld::~HelloWorld()
@@ -44,6 +37,17 @@ bool HelloWorld::init()
     Size visibleSize = Director::getInstance()->getVisibleSize();
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
 
+    StudentBySec = 0.1;
+    Money = 1;
+    MoneyBySecond = 0;
+    Knowledge = 0;
+    for (int i = 0 ; i < 10 ; i++)
+    {
+        Student* stu = new Student(60.0f);
+        NumberOfStudent.push_back(stu);
+    }
+
+    
     // KMU Logo
     logo = Sprite::create("logo.png");
     logo->setPosition(Vec2(origin.x + logo->getContentSize().width - 30, origin.y + visibleSize.height - 50));
@@ -75,22 +79,24 @@ bool HelloWorld::init()
 
     //UI Student
     NBStudent = UI::setSpriteWithFile("StudentZone.png");
-    NBStudent->setPosition(Vec2(origin.x + visibleSize.width * 0.35, visibleSize.height - 15));
-    NBStudent->setLabelFirst("0", "fonts/arial.ttf", 20.0f);
-    NBStudent->setLabelSecond("0", "fonts/arial.ttf", 15.0f);
+    NBStudent->setPosition(Vec2(origin.x + visibleSize.width * 0.30, visibleSize.height - 15));
+    NBStudent->setLabelFirst("0", "fonts/arial.ttf", 17.0f);
+    NBStudent->setLabelSecond("0", "fonts/arial.ttf", 12.0f);
     this->addChild(NBStudent,0);
     //UI Money
     NBMoney = UI::setSpriteWithFile("MoneyZone.png");
     NBMoney->setPosition(Vec2(origin.x + visibleSize.width * 0.55, visibleSize.height - 15));
-    NBMoney->setLabelFirst("0", "fonts/arial.ttf", 20.0f);
-    NBMoney->setLabelSecond("0", "fonts/arial.ttf", 15.0f);
+    NBMoney->setLabelFirst("0", "fonts/arial.ttf", 17.0f);
+    NBMoney->setLabelSecond("0", "fonts/arial.ttf", 12.0f);
     this->addChild(NBMoney,0);
     //UI Knowledge
     NBKnowledge = UI::setSpriteWithFile("KnowledgeZone.png");
-    NBKnowledge->setPosition(Vec2(origin.x + visibleSize.width * 0.75, visibleSize.height - 15));
-    NBKnowledge->setLabelFirst("0", "fonts/arial.ttf", 20.0f);
-    NBKnowledge->setLabelSecond("0", "fonts/arial.ttf", 15.0f);
+    NBKnowledge->setPosition(Vec2(origin.x + visibleSize.width * 0.80, visibleSize.height - 15));
+    NBKnowledge->setLabelFirst("0", "fonts/arial.ttf", 17.0f);
     this->addChild(NBKnowledge,0);
+    
+    this->scheduleUpdate();
+    
     return true;
 }
 
@@ -101,6 +107,9 @@ bool HelloWorld::onTouchBegan(Touch *touch, Event *event)
 
 void HelloWorld::update(float dt)
 {
+    NBStudent->updateLabel((int)NumberOfStudent.size(), StudentBySec);
+    NBMoney->updateLabel(Money, MoneyBySecond);
+    NBKnowledge->updateLabel(Knowledge);
 }
 
 void HelloWorld::UpgradeMenu(Ref *pSender)

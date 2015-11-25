@@ -16,8 +16,10 @@ class College : public cocos2d::Sprite
 	
 	static College* setSpriteWithFile(const char * file);
 	
-	Major one;
-	Major two;
+    void setNameOfCollege(std::string);
+    void setMajor(std::string, int, std::string, int);
+	Major *one;
+	Major *two;
 	
 	College();
 	~College();	
