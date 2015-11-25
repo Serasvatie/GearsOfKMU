@@ -110,11 +110,29 @@ bool GameMain::onTouchBegan(Touch *touch, Event *event)
     return true;
 }
 
-void GameMain::update(float dt)
+void GameMain::updateRessources()
+{
+    Money += MoneyBySecond;
+}
+
+void GameMain::updateAffRessources()
 {
     NBStudent->updateLabel((int)NumberOfStudent.size(), StudentBySec);
     NBMoney->updateLabel(Money, MoneyBySecond);
     NBKnowledge->updateLabel(Knowledge);
+}
+
+void GameMain::update(float dt)
+{
+    deltaTime += dt;
+    MoneyBySecond = 1.f;
+    CCLOG("%f\n", deltaTime);
+    if (deltaTime >= 1.f)
+    {
+        updateRessources();
+        deltaTime = 0.f;
+    }
+    updateAffRessources();
 }
 
 void GameMain::UpgradeMenu(Ref *pSender)
