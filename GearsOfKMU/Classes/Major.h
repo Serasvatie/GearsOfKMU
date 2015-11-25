@@ -4,6 +4,7 @@
 
 #include "Student.h"
 #include "cocos2d.h"
+#include "Major.h"
 
 class Major : public cocos2d::Sprite
 {
@@ -20,11 +21,12 @@ class Major : public cocos2d::Sprite
 	
 	std::string name;
 	
-	bool AddStudent();
+	cocos2d::Label* studentLabel;
 	
+	bool AddStudent(Student *);
 	static Major* setSprite(std::string , int);
-    cocos2d::Label* setLabelName(std::string, std::string, std::string);
-    cocos2d::Label* setLabelStudent(std::string, std::string, std::string);
+    cocos2d::Label* setLabelName(std::string);
+    cocos2d::Label* setLabelStudent(std::string);
     cocos2d::Sprite* setAddSprite(std::string);
     
     Major(std::string, int);
