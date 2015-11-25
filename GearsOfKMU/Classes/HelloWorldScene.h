@@ -9,6 +9,7 @@ class HelloWorld : public cocos2d::Layer
 {
 private:
     cocos2d::Sprite *logo;
+    cocos2d::Sprite *background;
     
     UI* NBStudent;
     UI* NBMoney;

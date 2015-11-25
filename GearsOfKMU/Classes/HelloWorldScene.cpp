@@ -44,6 +44,12 @@ bool HelloWorld::init()
     Size visibleSize = Director::getInstance()->getVisibleSize();
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
 
+    // Background
+    background = Sprite::create("MainGate.png");
+    background->setScale(background->getScale() * 2.f);
+    background->setPosition(Vec2(origin.x + background->getContentSize().width / 2, origin.y + background->getContentSize().height / 2));
+    this->addChild(background);
+    
     // KMU Logo
     logo = Sprite::create("logo.png");
     logo->setPosition(Vec2(origin.x + logo->getContentSize().width - 30, origin.y + visibleSize.height - 50));
