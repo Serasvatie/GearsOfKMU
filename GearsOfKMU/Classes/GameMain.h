@@ -17,7 +17,7 @@ private:
     
     float deltaTime;
     
-    std::list<Student*> NumberOfStudent;
+    std::list<Student*> Students;
     float StudentBySec;
     
     int Money;

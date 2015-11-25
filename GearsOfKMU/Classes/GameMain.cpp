@@ -38,13 +38,13 @@ bool GameMain::init()
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
 
     StudentBySec = 0.1;
-    Money = 1;
-    MoneyBySecond = 0;
+    Money = 10;
+    MoneyBySecond = 1.0;
     Knowledge = 0;
     for (int i = 0 ; i < 10 ; i++)
     {
         Student* stu = new Student(60.0f);
-        NumberOfStudent.push_back(stu);
+        Students.push_back(stu);
     }
 
     // Background
@@ -117,7 +117,7 @@ void GameMain::updateRessources()
 
 void GameMain::updateAffRessources()
 {
-    NBStudent->updateLabel((int)NumberOfStudent.size(), StudentBySec);
+    NBStudent->updateLabel((int)Students.size(), StudentBySec);
     NBMoney->updateLabel(Money, MoneyBySecond);
     NBKnowledge->updateLabel(Knowledge);
 }
