@@ -15,6 +15,8 @@ private:
     UI* NBMoney;
     UI* NBKnowledge;
     
+    float deltaTime;
+    
     std::list<Student*> NumberOfStudent;
     float StudentBySec;
     
@@ -37,6 +39,9 @@ public:
     
     virtual bool onTouchBegan(cocos2d::Touch* touch, cocos2d::Event* event);
     virtual void update (float dt);
+    
+    void updateRessources();
+    void updateAffRessources();
     
     // implement the "static create()" method manually
     CREATE_FUNC(GameMain);
