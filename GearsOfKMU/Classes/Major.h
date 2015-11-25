@@ -22,8 +22,11 @@ class Major : public cocos2d::Sprite
 	
 	bool AddStudent();
 	
-	static Major* setSpriteWithFile(const char* file);
-	
-	Major();
+	static Major* setSprite(std::string , int);
+    cocos2d::Label* setLabelName(std::string, std::string, std::string);
+    cocos2d::Label* setLabelStudent(std::string, std::string, std::string);
+    cocos2d::Sprite* setAddSprite(std::string);
+    
+    Major(std::string, int);
 	~Major();
 };

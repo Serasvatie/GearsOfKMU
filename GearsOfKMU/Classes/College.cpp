@@ -28,5 +28,5 @@ void College::setNameOfCollege(std::string name)
 
 void College::setMajor(std::string majorOneName, int maxStudentOne, std::string majorTwoName, int maxStudentSecond)
 {
-    
+
 }
