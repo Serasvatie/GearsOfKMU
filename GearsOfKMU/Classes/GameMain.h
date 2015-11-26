@@ -1,5 +1,5 @@
-#ifndef __HELLOWORLD_SCENE_H__
-#define __HELLOWORLD_SCENE_H__
+#ifndef __GAMEMAIN_H__
+#define __GAMEMAIN_H__
 
 #include "cocos2d.h"
 #include "Student.h"
@@ -50,4 +50,4 @@ public:
     CREATE_FUNC(GameMain);
 };
 
-#endif // __HELLOWORLD_SCENE_H__
+#endif // __GAMEMAIN_H__

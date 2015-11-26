@@ -1,3 +1,5 @@
+#ifndef __MAJOR_H__
+#define __MAJOR_H__
 
 #include <string>
 #include <list>
@@ -31,3 +33,5 @@ class Major : public cocos2d::Sprite
     Major(std::string, int);
 	~Major();
 };
+
+#endif // __MAJOR_H__
