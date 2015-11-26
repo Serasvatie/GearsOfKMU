@@ -37,6 +37,9 @@ bool GameMain::init()
     Size visibleSize = Director::getInstance()->getVisibleSize();
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
 
+    /*
+    ** Initialize Ressources
+    */
     StudentBySec = 0.1;
     Money = 10;
     MoneyBySecond = 1.5;
@@ -47,6 +50,9 @@ bool GameMain::init()
         Students.push_back(stu);
     }
 
+    /*
+    ** Create UI
+    */
     // Background
     background = Sprite::create("MainGate.png");
     background->setScale(background->getScale() * 2.f);
@@ -112,9 +118,16 @@ bool GameMain::onTouchBegan(Touch *touch, Event *event)
 
 void GameMain::updateRessources()
 {
+    /*
+    ** Update money
+    */
     MoneyTmp += MoneyBySecond;
     Money += (int)MoneyTmp;
     MoneyTmp -= (int)MoneyTmp;
+    
+    /*
+    ** Update student
+    */
     StudentTmp += StudentBySec;
     while (StudentTmp >= 1.f)
     {
@@ -127,17 +140,20 @@ void GameMain::updateRessources()
 void GameMain::updateAffRessources()
 {
     NBStudent->updateLabel((int)Students.size(), (float)StudentBySec);
-    NBMoney->updateLabel(Money, MoneyBySecond);
+    NBMoney->updateLabel((int)Money, (float)MoneyBySecond);
     NBKnowledge->updateLabel(Knowledge);
 }
 
 void GameMain::update(float dt)
 {
+    /*
+    ** Call updateRessources() each second
+    */
     second += dt;
     deltaTime += dt;
     if (second >= 1.f)
     {
-        updateRessources();
+       updateRessources();
         second = 0.f;
     }
     updateAffRessources();
