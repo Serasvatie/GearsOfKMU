@@ -124,7 +124,7 @@ void GameMain::updateRessources()
 
 void GameMain::updateAffRessources()
 {
-    NBStudent->updateLabel((int)Students.size(), StudentBySec);
+    NBStudent->updateLabel((int)Students.size(), (float)StudentBySec);
     NBMoney->updateLabel(Money, MoneyBySecond);
     NBKnowledge->updateLabel(Knowledge);
 }
