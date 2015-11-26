@@ -15,10 +15,12 @@ private:
     UI* NBMoney;
     UI* NBKnowledge;
     
+    float second;
     float deltaTime;
     
     std::list<Student*> Students;
     float StudentBySec;
+    float StudentTmp;
     
     int Money;
     float MoneyBySecond;

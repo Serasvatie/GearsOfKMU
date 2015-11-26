@@ -113,6 +113,13 @@ bool GameMain::onTouchBegan(Touch *touch, Event *event)
 void GameMain::updateRessources()
 {
     Money += MoneyBySecond;
+    StudentTmp += StudentBySec;
+    while (StudentTmp >= 1.f)
+    {
+        Student* stu = new Student(60.0f);
+        Students.push_back(stu);
+        StudentTmp -= 1;
+    }
 }
 
 void GameMain::updateAffRessources()
@@ -124,13 +131,13 @@ void GameMain::updateAffRessources()
 
 void GameMain::update(float dt)
 {
+    second += dt;
     deltaTime += dt;
     MoneyBySecond = 1.f;
-    CCLOG("%f\n", deltaTime);
-    if (deltaTime >= 1.f)
+    if (second >= 1.f)
     {
         updateRessources();
-        deltaTime = 0.f;
+        second = 0.f;
     }
     updateAffRessources();
 }
