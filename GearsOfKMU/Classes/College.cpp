@@ -28,5 +28,10 @@ void College::setNameOfCollege(std::string name)
 
 void College::setMajor(std::string majorOneName, int maxStudentOne, std::string majorTwoName, int maxStudentSecond)
 {
-    
+    One = Major::setSprite(majorOneName, maxStudentOne);
+    One->setPosition(Vec2(40,40));
+    this->addChild(One);
+    Two = Major::setSprite(majorTwoName, maxStudentTwo);
+    Two->setPosition(Vec2(80,80));
+    this->addChild(Two);
 }
