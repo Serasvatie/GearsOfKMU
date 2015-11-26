@@ -23,6 +23,7 @@ private:
     
     int Money;
     float MoneyBySecond;
+    float MoneyTmp;
     
     int Knowledge;
     

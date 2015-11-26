@@ -39,7 +39,7 @@ bool GameMain::init()
 
     StudentBySec = 0.1;
     Money = 10;
-    MoneyBySecond = 1.0;
+    MoneyBySecond = 1.5;
     Knowledge = 0;
     for (int i = 0 ; i < 10 ; i++)
     {
@@ -112,7 +112,9 @@ bool GameMain::onTouchBegan(Touch *touch, Event *event)
 
 void GameMain::updateRessources()
 {
-    Money += MoneyBySecond;
+    MoneyTmp += MoneyBySecond;
+    Money += (int)MoneyTmp;
+    MoneyTmp -= (int)MoneyTmp;
     StudentTmp += StudentBySec;
     while (StudentTmp >= 1.f)
     {
@@ -133,7 +135,6 @@ void GameMain::update(float dt)
 {
     second += dt;
     deltaTime += dt;
-    MoneyBySecond = 1.f;
     if (second >= 1.f)
     {
         updateRessources();
