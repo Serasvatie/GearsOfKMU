@@ -38,13 +38,13 @@ bool GameMain::init()
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
 
     StudentBySec = 0.1;
-    Money = 1;
-    MoneyBySecond = 0;
+    Money = 10;
+    MoneyBySecond = 1.0;
     Knowledge = 0;
     for (int i = 0 ; i < 10 ; i++)
     {
         Student* stu = new Student(60.0f);
-        NumberOfStudent.push_back(stu);
+        Students.push_back(stu);
     }
 
     // Background
@@ -113,24 +113,31 @@ bool GameMain::onTouchBegan(Touch *touch, Event *event)
 void GameMain::updateRessources()
 {
     Money += MoneyBySecond;
+    StudentTmp += StudentBySec;
+    while (StudentTmp >= 1.f)
+    {
+        Student* stu = new Student(60.0f);
+        Students.push_back(stu);
+        StudentTmp -= 1;
+    }
 }
 
 void GameMain::updateAffRessources()
 {
-    NBStudent->updateLabel((int)NumberOfStudent.size(), StudentBySec);
+    NBStudent->updateLabel((int)Students.size(), (float)StudentBySec);
     NBMoney->updateLabel(Money, MoneyBySecond);
     NBKnowledge->updateLabel(Knowledge);
 }
 
 void GameMain::update(float dt)
 {
+    second += dt;
     deltaTime += dt;
     MoneyBySecond = 1.f;
-    CCLOG("%f\n", deltaTime);
-    if (deltaTime >= 1.f)
+    if (second >= 1.f)
     {
         updateRessources();
-        deltaTime = 0.f;
+        second = 0.f;
     }
     updateAffRessources();
 }

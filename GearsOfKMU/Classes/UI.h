@@ -1,4 +1,4 @@
-
+#include <sstream>
 #include "cocos2d.h"
 
 class UI : public cocos2d::Sprite

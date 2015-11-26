@@ -52,7 +52,7 @@ void Major::AddStudent(Ref *pSender)
 {
     auto tmp = cocos2d::Director::sharedDirector()->getRunningScene();
     GameMain* layer = dynamic_cast<GameMain*>(tmp);
-    Student* stu = layer->NumberOfStudent.front();
+    Student* stu = layer->Students.front();
     student.push_back(stu);
-    layer->NumberOfStudent.pop_front();
+    layer->Students.pop_front();
 }

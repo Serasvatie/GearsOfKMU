@@ -44,8 +44,12 @@ cocos2d::Label* UI::setLabelSecond(const std::string test, const std::string fon
 void UI::updateLabel(int first, float second)
 {
     this->first->setString(std::to_string(first));
-    std::string text = "+" + std::to_string((int)(roundf(second))) + "/s";
+
+    std::ostringstream buff;
+    buff << second;
+    std::string text = "+" + buff.str() + "/s";
     this->second->setString(text);
+
 }
 
 void UI::updateLabel(int first)

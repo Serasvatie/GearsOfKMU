@@ -15,9 +15,11 @@ private:
     UI* NBMoney;
     UI* NBKnowledge;
     
+    float second;
     float deltaTime;
     
     float StudentBySec;
+    float StudentTmp;
     
     int Money;
     float MoneyBySecond;
@@ -34,7 +36,7 @@ public:
     
     static cocos2d::Scene* createScene();
     
-    std::list<Student*> NumberOfStudent;
+    std::list<Student*> Students;
     
     virtual bool init();
     
