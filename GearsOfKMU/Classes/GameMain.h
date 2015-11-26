@@ -17,7 +17,6 @@ private:
     
     float deltaTime;
     
-    std::list<Student*> NumberOfStudent;
     float StudentBySec;
     
     int Money;
@@ -34,6 +33,8 @@ public:
     GameMain();
     
     static cocos2d::Scene* createScene();
+    
+    std::list<Student*> NumberOfStudent;
     
     virtual bool init();
     

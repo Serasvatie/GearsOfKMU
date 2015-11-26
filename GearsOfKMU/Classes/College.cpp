@@ -28,10 +28,10 @@ void College::setNameOfCollege(std::string name)
 
 void College::setMajor(std::string majorOneName, int maxStudentOne, std::string majorTwoName, int maxStudentSecond)
 {
-    One = Major::setSprite(majorOneName, maxStudentOne);
-    One->setPosition(Vec2(40,40));
-    this->addChild(One);
-    Two = Major::setSprite(majorTwoName, maxStudentTwo);
-    Two->setPosition(Vec2(80,80));
-    this->addChild(Two);
+    one = Major::setSprite(majorOneName, maxStudentOne);
+    one->setPosition(cocos2d::Vec2(40,40));
+    this->addChild(one);
+    two = Major::setSprite(majorTwoName, maxStudentSecond);
+    two->setPosition(cocos2d::Vec2(80,80));
+    this->addChild(two);
 }
