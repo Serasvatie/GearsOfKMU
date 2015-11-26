@@ -100,6 +100,13 @@ bool GameMain::init()
     NBKnowledge->setLabelFirst("0", "fonts/arial.ttf", 17.0f);
     this->addChild(NBKnowledge,0);
     
+    //College of Engineering
+    Engineering = College::setSpriteWithFile("CollegeZone.png");
+    Engineering->setNameOfCollege("College of Engineering");
+    Engineering->setMajor("Game & Mobile Dev.", 10, "Dpt. of Electronic Engineering", 5);
+    Engineering->setPosition(Vec2(visibleSize.width * 0.5, visibleSize.height * 0.5));
+    this->addChild(Engineering);
+    
     this->scheduleUpdate();
     
     return true;

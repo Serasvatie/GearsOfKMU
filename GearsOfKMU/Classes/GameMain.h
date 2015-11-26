@@ -3,6 +3,7 @@
 
 #include "cocos2d.h"
 #include "Student.h"
+#include "College.h"
 #include "UI.h"
 
 class GameMain : public cocos2d::Layer
@@ -14,6 +15,8 @@ private:
     UI* NBStudent;
     UI* NBMoney;
     UI* NBKnowledge;
+    
+    College* Engineering;
     
     float second;
     float deltaTime;

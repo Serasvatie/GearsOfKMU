@@ -1,6 +1,7 @@
 
 #include "Major.h"
 #include "GameMain.h"
+
 Major::Major(std::string name, int student)
 {
     NbMaxStudent = student;
