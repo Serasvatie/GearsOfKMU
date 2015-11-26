@@ -1,3 +1,6 @@
+#ifndef __UI_H__
+#define __UI_H__
+
 #include <sstream>
 #include "cocos2d.h"
 
@@ -19,3 +22,5 @@ class UI : public cocos2d::Sprite
     void updateLabel(int, float);
     void updateLabel(int);
 };
+
+#endif // __UI_H__
