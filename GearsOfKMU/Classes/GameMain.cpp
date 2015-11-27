@@ -40,13 +40,16 @@ bool GameMain::init()
     /*
     ** Initialize Ressources
     */
-    StudentBySec = 0.1;
+    StudentBySec = 0.1f;
     Money = 10;
     MoneyBySecond = 1.5;
-    Knowledge = 0;
+	Knowledge = 0;
+	second = 0.f;
+	MoneyTmp = 0.f;
+	StudentTmp = 0.f;
     for (int i = 0 ; i < 10 ; i++)
     {
-        Student* stu = new Student(60.0f);
+        Student* stu = new Student();
         Students.push_back(stu);
     }
 
@@ -108,12 +111,53 @@ bool GameMain::init()
     
     //College of Engineering
     Engineering = College::setSpriteWithFile("CollegeZone.png");
-    Engineering->setNameOfCollege("College of Engineering");
-    Engineering->setMajor("Game & Mobile Dev.", 10, "Dpt. of Electronic Engineering", 5);
-    Engineering->setPosition(Vec2(visibleSize.width * 0.5, visibleSize.height * 0.5));
-    this->addChild(Engineering);
+	Engineering->setScale(Engineering->getScale() * 1.3);
+	Engineering->setNameOfCollege("College of Engineering", 8.0f);
+    Engineering->setMajor("Game and Mobile Dev.", 10, 11.0f, 10.0f, "Dpt. of Electronic Engineering", 5, 9.0f, 15.0f);
+    Engineering->setPosition(Vec2(visibleSize.width * 0.45, visibleSize.height * 0.7));
+	this->addChild(Engineering);
     
-    this->scheduleUpdate();
+	//College of Medecine
+	Medecine = College::setSpriteWithFile("CollegeZone.png");
+	Medecine->setScale(Medecine->getScale() * 1.3);
+	Medecine->setNameOfCollege("College of Medecine", 8.0f);
+	Medecine->setMajor("Medecine Department", 8, 12.0f, 25.0f, "Biomedical Engineering", 4, 11.0f, 30.0f);
+	Medecine->setPosition(Vec2(visibleSize.width * 0.85, visibleSize.height * 0.7));
+	this->addChild(Medecine);
+
+	//College of Education
+	Education = College::setSpriteWithFile("CollegeZone.png");
+	Education->setScale(Education->getScale() * 1.3);
+	Education->setNameOfCollege("College of Education", 8.0f);
+	Education->setMajor("Korean Language Education", 15, 9.0f, 13.0f, "Early Childhoud Education", 13, 10.0f, 17.0f);
+	Education->setPosition(Vec2(visibleSize.width * 0.45, visibleSize.height * 0.5));
+	this->addChild(Education);
+
+	//College of Social
+	Social = College::setSpriteWithFile("CollegeZone.png");
+	Social->setScale(Social->getScale() * 1.3);
+	Social->setNameOfCollege("College of Social Science", 8.0f);
+	Social->setMajor("Dpt. of Int. Trade and Commerce", 19, 8.0f, 40.0f, "Dpt. of Public Administration", 50, 9.0f, 26.0f);
+	Social->setPosition(Vec2(visibleSize.width * 0.85, visibleSize.height * 0.5));
+	this->addChild(Social);
+
+	//College of Natural
+	Natural = College::setSpriteWithFile("CollegeZone.png");
+	Natural->setScale(Natural->getScale() * 1.3);
+	Natural->setNameOfCollege("College of Natural Science", 8.0f);
+	Natural->setMajor("Mathematics Department", 30, 10.0f, 50.0f,"Global Environnement Dpt.", 25, 10.0f, 35.0f);
+	Natural->setPosition(Vec2(visibleSize.width * 0.45, visibleSize.height * 0.3));
+	this->addChild(Natural);
+
+	// College of Music
+	Music = College::setSpriteWithFile("CollegeZone.png");
+	Music->setScale(Music->getScale() * 1.3);
+	Music->setNameOfCollege("College of Music and Perfoming Arts", 7.0f);
+	Music->setMajor("Orchestral Instruments Dpt.", 60, 9.0f, 100.0f,"Dance Department", 50, 12.0f, 70.0f);
+	Music->setPosition(Vec2(visibleSize.width * 0.85, visibleSize.height * 0.3));
+	this->addChild(Music);
+
+	this->scheduleUpdate();
     
     return true;
 }
@@ -138,7 +182,7 @@ void GameMain::updateRessources()
     StudentTmp += StudentBySec;
     while (StudentTmp >= 1.f)
     {
-        Student* stu = new Student(60.0f);
+        Student* stu = new Student();
         Students.push_back(stu);
         StudentTmp -= 1;
     }
@@ -151,6 +195,16 @@ void GameMain::updateAffRessources()
     NBKnowledge->updateLabel(Knowledge);
 }
 
+void GameMain::updateCollege(float dt)
+{
+	Medecine->update(dt);
+	Engineering->update(dt);
+	Education->update(dt);
+	Social->update(dt);
+	Natural->update(dt);
+	Music->update(dt);
+}
+		   
 void GameMain::update(float dt)
 {
     /*
@@ -164,6 +218,12 @@ void GameMain::update(float dt)
         second = 0.f;
     }
     updateAffRessources();
+	updateCollege(dt);
+}
+
+void GameMain::AddKnowledge(int addvalue)
+{
+	Knowledge += addvalue;
 }
 
 void GameMain::UpgradeMenu(Ref *pSender)

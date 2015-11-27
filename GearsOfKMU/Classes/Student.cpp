@@ -7,10 +7,10 @@
 //
 
 #include "Student.h"
+#include "cocos2d.h"
 
-Student::Student(float time)
+Student::Student()
 {
-    this->TimeToGraduate = time;
     this->startStudy = false;
 }
 
@@ -25,4 +25,9 @@ bool Student::updateTime(float dt)
     if (TimeToGraduate <= 0)
         return true;
     return false;
+}
+
+void Student::setTimeToGraduate(float time)
+{
+	TimeToGraduate = time;
 }

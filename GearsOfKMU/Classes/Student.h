@@ -14,12 +14,12 @@
 class Student
 {
 public:
-    Student(float);
+    Student();
     ~Student();
 
     bool updateTime(float dt);
     bool startStudy;
-
+	void setTimeToGraduate(float);
     
 private:
     float TimeToGraduate;

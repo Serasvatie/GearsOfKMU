@@ -8,22 +8,23 @@
 class College : public cocos2d::Sprite
 {
 	private:
-	
+	Major *one;
+	Major *two;
+	std::string name;
+
 	public:
 	
 	bool unlock;
 	int MoneyToUnlock;
 	int KnowledgeToUnlock;
 	
-	std::string name;
 	
 	static College* setSpriteWithFile(const char * file);
 	
-    void setNameOfCollege(std::string);
-    void setMajor(std::string, int, std::string, int);
-	Major *one;
-	Major *two;
-	
+    void setNameOfCollege(std::string, float);
+    void setMajor(std::string, int, float, float timeOne, std::string, int, float, float timeSecond);
+	virtual void update(float dt);
+
 	College();
 	~College();	
 };
