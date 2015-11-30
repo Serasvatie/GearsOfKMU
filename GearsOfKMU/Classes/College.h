@@ -11,17 +11,19 @@ class College : public cocos2d::Sprite
 	Major *one;
 	Major *two;
 	std::string name;
-
+    bool unlock;
+    int MoneyToUnlock;
+    int KnowledgeToUnlock;
+    cocos2d::Menu* Lock;
+    cocos2d::Label* LabelMoney;
+    cocos2d::Label* LabelKnowledge;
+    
 	public:
-	
-	bool unlock;
-	int MoneyToUnlock;
-	int KnowledgeToUnlock;
-	
 	
 	static College* setSpriteWithFile(const char * file);
 	
-    void setNameOfCollege(std::string, float);
+    void Unlock(Ref *pSender);
+    void setNameOfCollege(std::string, float, bool unlock, int moneyToUnlock, int knowledgeToUnlock);
     void setMajor(std::string, int, float, float timeOne, std::string, int, float, float timeSecond);
 	virtual void update(float dt);
 

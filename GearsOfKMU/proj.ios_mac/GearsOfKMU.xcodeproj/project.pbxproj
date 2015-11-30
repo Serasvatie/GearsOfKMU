@@ -58,6 +58,7 @@
 		521A8EAA19F11F5000D177D7 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 521A8EA819F11F5000D177D7 /* fonts */; };
 		52B47A471A53D09C004E4C60 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52B47A461A53D09B004E4C60 /* Security.framework */; };
 		8262943E1AAF051F00CB7CF7 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8262943D1AAF051F00CB7CF7 /* Security.framework */; };
+		84AC2AD91C0C2098009ACD20 /* LockCollegeZone.png in Resources */ = {isa = PBXBuildFile; fileRef = 84AC2AD81C0C2098009ACD20 /* LockCollegeZone.png */; };
 		84AF78841C056DA900FECEC4 /* MainGate.png in Resources */ = {isa = PBXBuildFile; fileRef = 84AF78831C056DA900FECEC4 /* MainGate.png */; };
 		84D763901BFD83E8002F3CEE /* Button Reset Normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 84D763891BFD83E8002F3CEE /* Button Reset Normal.png */; };
 		84D763911BFD83E8002F3CEE /* Button Reset Selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 84D7638A1BFD83E8002F3CEE /* Button Reset Selected.png */; };
@@ -66,6 +67,7 @@
 		84D763941BFD83E8002F3CEE /* Button Upgrade Normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 84D7638D1BFD83E8002F3CEE /* Button Upgrade Normal.png */; };
 		84D763951BFD83E8002F3CEE /* Button Upgrade Selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 84D7638E1BFD83E8002F3CEE /* Button Upgrade Selected.png */; };
 		84D763961BFD83E8002F3CEE /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 84D7638F1BFD83E8002F3CEE /* logo.png */; };
+		84E323CE1C06921E006C0FC4 /* CollegeZone.png in Resources */ = {isa = PBXBuildFile; fileRef = 84E323CD1C06921E006C0FC4 /* CollegeZone.png */; };
 		84EC670E1BFE9B32001FC773 /* Dollars.png in Resources */ = {isa = PBXBuildFile; fileRef = 84EC670B1BFE9B32001FC773 /* Dollars.png */; };
 		84EC670F1BFE9B32001FC773 /* Knowledge.png in Resources */ = {isa = PBXBuildFile; fileRef = 84EC670C1BFE9B32001FC773 /* Knowledge.png */; };
 		84EC67101BFE9B32001FC773 /* KnowledgeZone.png in Resources */ = {isa = PBXBuildFile; fileRef = 84EC670D1BFE9B32001FC773 /* KnowledgeZone.png */; };
@@ -169,6 +171,7 @@
 		521A8EA819F11F5000D177D7 /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fonts; sourceTree = "<group>"; };
 		52B47A461A53D09B004E4C60 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.1.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
 		8262943D1AAF051F00CB7CF7 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		84AC2AD81C0C2098009ACD20 /* LockCollegeZone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LockCollegeZone.png; sourceTree = "<group>"; };
 		84AF78831C056DA900FECEC4 /* MainGate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MainGate.png; sourceTree = "<group>"; };
 		84D763891BFD83E8002F3CEE /* Button Reset Normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Button Reset Normal.png"; sourceTree = "<group>"; };
 		84D7638A1BFD83E8002F3CEE /* Button Reset Selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Button Reset Selected.png"; sourceTree = "<group>"; };
@@ -177,6 +180,7 @@
 		84D7638D1BFD83E8002F3CEE /* Button Upgrade Normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Button Upgrade Normal.png"; sourceTree = "<group>"; };
 		84D7638E1BFD83E8002F3CEE /* Button Upgrade Selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Button Upgrade Selected.png"; sourceTree = "<group>"; };
 		84D7638F1BFD83E8002F3CEE /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		84E323CD1C06921E006C0FC4 /* CollegeZone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CollegeZone.png; sourceTree = "<group>"; };
 		84EC670B1BFE9B32001FC773 /* Dollars.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Dollars.png; sourceTree = "<group>"; };
 		84EC670C1BFE9B32001FC773 /* Knowledge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Knowledge.png; sourceTree = "<group>"; };
 		84EC670D1BFE9B32001FC773 /* KnowledgeZone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = KnowledgeZone.png; sourceTree = "<group>"; };
@@ -323,6 +327,8 @@
 		46880B7519C43A67006E1F66 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				84AC2AD81C0C2098009ACD20 /* LockCollegeZone.png */,
+				84E323CD1C06921E006C0FC4 /* CollegeZone.png */,
 				84AF78831C056DA900FECEC4 /* MainGate.png */,
 				84EC67111BFE9B43001FC773 /* MoneyZone.png */,
 				84EC67121BFE9B43001FC773 /* Plus Button.png */,
@@ -531,9 +537,11 @@
 				521A8EA919F11F5000D177D7 /* fonts in Resources */,
 				50EF62A317ECD613001EB2F8 /* Icon-50.png in Resources */,
 				5087E78017EB970100C73F5D /* Icon-114.png in Resources */,
+				84E323CE1C06921E006C0FC4 /* CollegeZone.png in Resources */,
 				50EF62A217ECD613001EB2F8 /* Icon-29.png in Resources */,
 				84D763951BFD83E8002F3CEE /* Button Upgrade Selected.png in Resources */,
 				50EF629617ECD46A001EB2F8 /* Icon-40.png in Resources */,
+				84AC2AD91C0C2098009ACD20 /* LockCollegeZone.png in Resources */,
 				5087E78217EB970100C73F5D /* Icon-144.png in Resources */,
 				84EC67141BFE9B43001FC773 /* MoneyZone.png in Resources */,
 				3EACC98F19EE6D4300EB3C5E /* res in Resources */,

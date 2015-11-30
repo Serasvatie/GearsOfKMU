@@ -20,11 +20,13 @@ private:
 	int NbMaxStudent;
 	std::list<Student*> student;
 	std::string name;
-
+    
 	cocos2d::Label* studentLabel;
 
 public:
-		
+	
+    cocos2d::Menu* Button;
+    
 	void AddStudent(Ref *pSender);
     static Major* setSprite(std::string, int);
     cocos2d::Label* setLabelName(std::string, float);

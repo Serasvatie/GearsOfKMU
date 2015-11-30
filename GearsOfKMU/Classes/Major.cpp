@@ -28,7 +28,7 @@ cocos2d::Menu* Major::setAddSprite()
 {
     auto button = cocos2d::MenuItemImage::create("Plus Button.png", "Plus Button.png", CC_CALLBACK_1(Major::AddStudent, this));
     button->setPosition(cocos2d::Vec2(40,0));
-    auto Button = cocos2d::Menu::create(button, NULL);
+    Button = cocos2d::Menu::create(button, NULL);
     Button->setPosition(cocos2d::Vec2::ZERO);
     this->addChild(Button, 0);
 	return Button;

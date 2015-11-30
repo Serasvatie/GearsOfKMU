@@ -29,11 +29,8 @@ private:
     float StudentBySec;
     float StudentTmp;
     
-    int Money;
     float MoneyBySecond;
     float MoneyTmp;
-    
-    int Knowledge;
     
     void UpgradeMenu(Ref *pSender);
     void StatisticMenu(Ref *pSender);
@@ -50,6 +47,8 @@ public:
     static cocos2d::Scene* createScene();
     
     std::list<Student*> Students;
+    int Money;
+    int Knowledge;
     
     virtual bool init();
     

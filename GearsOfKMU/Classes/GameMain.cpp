@@ -74,14 +74,6 @@ bool GameMain::init()
     auto Upgrade = Menu::create(upgrade, NULL);
     Upgrade->setPosition(Vec2::ZERO);
     this->addChild(Upgrade, 0);
-    
-    //Statistic buttom
-    auto stat = MenuItemImage::create( "Button StatisticNormal.png", "Button Statistic Selected.png", CC_CALLBACK_1(GameMain::StatisticMenu, this));
-    stat->setPosition(Vec2(origin.x + stat->getContentSize().width + 15, origin.y + visibleSize.height * 0.35));
-    stat->setScale(stat->getScale() * 2.0f);
-    auto Stat = Menu::create(stat, NULL);
-    Stat->setPosition(Vec2::ZERO);
-    this->addChild(Stat, 0);
 
     //ResetButton
     auto reset = MenuItemImage::create( "Button Reset Normal.png", "Button Reset Selected.png", CC_CALLBACK_1(GameMain::ResetMenu, this));
@@ -111,50 +103,50 @@ bool GameMain::init()
     
     //College of Engineering
     Engineering = College::setSpriteWithFile("CollegeZone.png");
-	Engineering->setScale(Engineering->getScale() * 1.3);
-	Engineering->setNameOfCollege("College of Engineering", 8.0f);
+	Engineering->setScale(Engineering->getScale() * 1.2);
+	Engineering->setNameOfCollege("College of Engineering", 8.0f, true, 0, 0);
     Engineering->setMajor("Game and Mobile Dev.", 10, 11.0f, 10.0f, "Dpt. of Electronic Engineering", 5, 9.0f, 15.0f);
-    Engineering->setPosition(Vec2(visibleSize.width * 0.45, visibleSize.height * 0.7));
+    Engineering->setPosition(Vec2(visibleSize.width * 0.35, visibleSize.height * 0.75));
 	this->addChild(Engineering);
     
 	//College of Medecine
 	Medecine = College::setSpriteWithFile("CollegeZone.png");
-	Medecine->setScale(Medecine->getScale() * 1.3);
-	Medecine->setNameOfCollege("College of Medecine", 8.0f);
+	Medecine->setScale(Medecine->getScale() * 1.2);
+	Medecine->setNameOfCollege("College of Medecine", 8.0f, false, 50,50);
 	Medecine->setMajor("Medecine Department", 8, 12.0f, 25.0f, "Biomedical Engineering", 4, 11.0f, 30.0f);
-	Medecine->setPosition(Vec2(visibleSize.width * 0.85, visibleSize.height * 0.7));
+	Medecine->setPosition(Vec2(visibleSize.width * 0.75, visibleSize.height * 0.75));
 	this->addChild(Medecine);
 
 	//College of Education
 	Education = College::setSpriteWithFile("CollegeZone.png");
-	Education->setScale(Education->getScale() * 1.3);
-	Education->setNameOfCollege("College of Education", 8.0f);
+	Education->setScale(Education->getScale() * 1.2);
+	Education->setNameOfCollege("College of Education", 8.0f, false, 100, 100);
 	Education->setMajor("Korean Language Education", 15, 9.0f, 13.0f, "Early Childhoud Education", 13, 10.0f, 17.0f);
-	Education->setPosition(Vec2(visibleSize.width * 0.45, visibleSize.height * 0.5));
+	Education->setPosition(Vec2(visibleSize.width * 0.35, visibleSize.height * 0.53));
 	this->addChild(Education);
 
 	//College of Social
 	Social = College::setSpriteWithFile("CollegeZone.png");
-	Social->setScale(Social->getScale() * 1.3);
-	Social->setNameOfCollege("College of Social Science", 8.0f);
+	Social->setScale(Social->getScale() * 1.2);
+	Social->setNameOfCollege("College of Social Science", 8.0f, false, 200, 200);
 	Social->setMajor("Dpt. of Int. Trade and Commerce", 19, 8.0f, 40.0f, "Dpt. of Public Administration", 50, 9.0f, 26.0f);
-	Social->setPosition(Vec2(visibleSize.width * 0.85, visibleSize.height * 0.5));
+	Social->setPosition(Vec2(visibleSize.width * 0.75, visibleSize.height * 0.53));
 	this->addChild(Social);
 
 	//College of Natural
 	Natural = College::setSpriteWithFile("CollegeZone.png");
-	Natural->setScale(Natural->getScale() * 1.3);
-	Natural->setNameOfCollege("College of Natural Science", 8.0f);
+	Natural->setScale(Natural->getScale() * 1.2);
+	Natural->setNameOfCollege("College of Natural Science", 8.0f, false, 500, 500);
 	Natural->setMajor("Mathematics Department", 30, 10.0f, 50.0f,"Global Environnement Dpt.", 25, 10.0f, 35.0f);
-	Natural->setPosition(Vec2(visibleSize.width * 0.45, visibleSize.height * 0.3));
+	Natural->setPosition(Vec2(visibleSize.width * 0.35, visibleSize.height * 0.31));
 	this->addChild(Natural);
 
 	// College of Music
 	Music = College::setSpriteWithFile("CollegeZone.png");
-	Music->setScale(Music->getScale() * 1.3);
-	Music->setNameOfCollege("College of Music and Perfoming Arts", 7.0f);
+	Music->setScale(Music->getScale() * 1.2);
+	Music->setNameOfCollege("College of Music and Perfoming Arts", 7.0f, false, 750, 750);
 	Music->setMajor("Orchestral Instruments Dpt.", 60, 9.0f, 100.0f,"Dance Department", 50, 12.0f, 70.0f);
-	Music->setPosition(Vec2(visibleSize.width * 0.85, visibleSize.height * 0.3));
+	Music->setPosition(Vec2(visibleSize.width * 0.75, visibleSize.height * 0.31));
 	this->addChild(Music);
 
 	this->scheduleUpdate();
