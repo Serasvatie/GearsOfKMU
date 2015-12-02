@@ -108,3 +108,20 @@ int College::getNumberOfStudents()
     
     return ret;
 }
+
+void College::Reset(bool unlock, int moneytounlock, int knowledgetounlock,
+                    int major1MaxStudent, float major1TimeToGraduate,
+                    int major2MaxStudent, float major2TimeToGraduate)
+{
+    this->unlock = unlock;
+    if (unlock == false)
+    {
+        Lock->setVisible(true);
+        LabelKnowledge->setVisible(true);
+        LabelMoney->setVisible(true);
+    }
+    this->MoneyToUnlock = moneytounlock;
+    this->KnowledgeToUnlock = knowledgetounlock;
+    one->Reset(major1MaxStudent, major1TimeToGraduate);
+    two->Reset(major2MaxStudent, major2TimeToGraduate);
+}

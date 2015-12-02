@@ -21,7 +21,9 @@ class College : public cocos2d::Sprite
 	public:
 	
 	static College* setSpriteWithFile(const char * file);
-	
+    void Reset(bool unlock, int moneytounlock, int knowledgetounlock,
+               int major1MaxStudent, float major1TimeToGraduate,
+               int major2MaxStudent, float major2TimeToGraduate);
     void Unlock(Ref *pSender);
     void setNameOfCollege(std::string, float, bool unlock, int moneyToUnlock, int knowledgeToUnlock);
     void setMajor(std::string, int, float, float timeOne, std::string, int, float, float timeSecond);

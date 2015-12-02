@@ -174,6 +174,7 @@
 		521A8EA819F11F5000D177D7 /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fonts; sourceTree = "<group>"; };
 		52B47A461A53D09B004E4C60 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.1.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
 		8262943D1AAF051F00CB7CF7 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		843B7A1A1C0EBC17008262DA /* GearOfKMUMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GearOfKMUMacro.h; sourceTree = "<group>"; };
 		84A9803C1C0EB06800FA4AC7 /* Background.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Background.mp3; sourceTree = "<group>"; };
 		84A9803F1C0EB4C200FA4AC7 /* clickbutton.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = clickbutton.mp3; sourceTree = "<group>"; };
 		84A980411C0EB4C700FA4AC7 /* invalid.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = invalid.mp3; sourceTree = "<group>"; };
@@ -365,6 +366,7 @@
 		46880B8319C43A87006E1F66 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				843B7A1A1C0EBC17008262DA /* GearOfKMUMacro.h */,
 				84FFDD891C02DD7600889B90 /* College.cpp */,
 				84FFDD8A1C02DD7600889B90 /* College.h */,
 				84FFDD8D1C02DD7600889B90 /* GameMain.cpp */,

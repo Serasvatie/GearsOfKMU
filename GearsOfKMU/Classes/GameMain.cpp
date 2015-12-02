@@ -105,51 +105,57 @@ bool GameMain::init()
     
     //College of Engineering
     Engineering = College::setSpriteWithFile("CollegeZone.png");
-	Engineering->setScale(Engineering->getScale() * 1.2);
-	Engineering->setNameOfCollege("College of Engineering", 8.0f, true, 0, 0);
-    Engineering->setMajor("Game and Mobile Dev.", 10, 11.0f, 10.0f, "Dpt. of Electronic Engineering", 5, 9.0f, 15.0f);
+    Engineering->setScale(Engineering->getScale() * 1.2);
+    Engineering->setNameOfCollege("College of Engineering", 8.0f, ENGINEERING_UNLOCK, ENGINEERING_MONEYUNLOCK, ENGINEERING_KNOWLEDGEUNLOCK);
+    Engineering->setMajor("Game and Mobile Dev.", ENGINEERING_MAJOR1_MAXSTUDENT, 11.0f, ENGINEERING_MAJOR1_TIMETOGRADUATE,
+                          "Dpt. of Electronic Engineering", ENGINEERING_MAJOR2_MAXSTUDENT, 9.0f, ENGINEERING_MAJOR2_TIMETOGRADUATE);
     Engineering->setPosition(Vec2(visibleSize.width * 0.35, visibleSize.height * 0.75));
-	this->addChild(Engineering);
+    this->addChild(Engineering);
     
-	//College of Medecine
-	Medecine = College::setSpriteWithFile("CollegeZone.png");
-	Medecine->setScale(Medecine->getScale() * 1.2);
-	Medecine->setNameOfCollege("College of Medecine", 8.0f, false, 50,50);
-	Medecine->setMajor("Medecine Department", 8, 12.0f, 25.0f, "Biomedical Engineering", 4, 11.0f, 30.0f);
-	Medecine->setPosition(Vec2(visibleSize.width * 0.75, visibleSize.height * 0.75));
-	this->addChild(Medecine);
-
-	//College of Education
-	Education = College::setSpriteWithFile("CollegeZone.png");
-	Education->setScale(Education->getScale() * 1.2);
-	Education->setNameOfCollege("College of Education", 8.0f, false, 100, 100);
-	Education->setMajor("Korean Language Education", 15, 9.0f, 13.0f, "Early Childhoud Education", 13, 10.0f, 17.0f);
-	Education->setPosition(Vec2(visibleSize.width * 0.35, visibleSize.height * 0.53));
-	this->addChild(Education);
-
-	//College of Social
-	Social = College::setSpriteWithFile("CollegeZone.png");
-	Social->setScale(Social->getScale() * 1.2);
-	Social->setNameOfCollege("College of Social Science", 8.0f, false, 200, 200);
-	Social->setMajor("Dpt. of Int. Trade and Commerce", 19, 8.0f, 40.0f, "Dpt. of Public Administration", 50, 9.0f, 26.0f);
-	Social->setPosition(Vec2(visibleSize.width * 0.75, visibleSize.height * 0.53));
-	this->addChild(Social);
-
-	//College of Natural
-	Natural = College::setSpriteWithFile("CollegeZone.png");
-	Natural->setScale(Natural->getScale() * 1.2);
-	Natural->setNameOfCollege("College of Natural Science", 8.0f, false, 500, 500);
-	Natural->setMajor("Mathematics Department", 30, 10.0f, 50.0f,"Global Environnement Dpt.", 25, 10.0f, 35.0f);
-	Natural->setPosition(Vec2(visibleSize.width * 0.35, visibleSize.height * 0.31));
-	this->addChild(Natural);
-
-	// College of Music
-	Music = College::setSpriteWithFile("CollegeZone.png");
-	Music->setScale(Music->getScale() * 1.2);
-	Music->setNameOfCollege("College of Music and Perfoming Arts", 7.0f, false, 750, 750);
-	Music->setMajor("Orchestral Instruments Dpt.", 60, 9.0f, 100.0f,"Dance Department", 50, 12.0f, 70.0f);
-	Music->setPosition(Vec2(visibleSize.width * 0.75, visibleSize.height * 0.31));
-	this->addChild(Music);
+    //College of Medecine
+    Medecine = College::setSpriteWithFile("CollegeZone.png");
+    Medecine->setScale(Medecine->getScale() * 1.2);
+    Medecine->setNameOfCollege("College of Medecine", 8.0f, MEDECINE_UNLOCK, MEDECINE_MONEYUNCLOCK, MEDECINE_KNOWLEDGEUNLOCK);
+    Medecine->setMajor("Medecine Department", MEDECINE_MAJOR1_MAXSTUDENT, 12.0f, MEDECINE_MAJOR1_TIMETOGRADUATE,
+                       "Biomedical Engineering", MEDECINE_MAJOR2_MAXSTUDENT, 11.0f, MEDECINE_MAJOR2_TIMETOGRADUATE);
+    Medecine->setPosition(Vec2(visibleSize.width * 0.75, visibleSize.height * 0.75));
+    this->addChild(Medecine);
+    
+    //College of Education
+    Education = College::setSpriteWithFile("CollegeZone.png");
+    Education->setScale(Education->getScale() * 1.2);
+    Education->setNameOfCollege("College of Education", 8.0f, EDUCATION_UNLOCK, EDUCATION_MONEYUNCLOCK, EDUCATION_KNOWLEDGEUNLOCK);
+    Education->setMajor("Korean Language Education", EDUCATION_MAJOR1_MAXSTUDENT, 9.0f, EDUCATION_MAJOR1_TIMETOGRADUATE,
+                        "Early Childhoud Education", EDUCATION_MAJOR2_MAXSTUDENT, 10.0f, EDUCATION_MAJOR2_TIMETOGRADUATE);
+    Education->setPosition(Vec2(visibleSize.width * 0.35, visibleSize.height * 0.53));
+    this->addChild(Education);
+    
+    //College of Social
+    Social = College::setSpriteWithFile("CollegeZone.png");
+    Social->setScale(Social->getScale() * 1.2);
+    Social->setNameOfCollege("College of Social Science", 8.0f, SOCIAL_UNLOCK, SOCIAL_MONEYUNCLOCK, SOCIAL_KNOWLEDGEUNLOCK);
+    Social->setMajor("Dpt. of Int. Trade and Commerce", SOCIAL_MAJOR1_MAXSTUDENT, 8.0f, SOCIAL_MAJOR1_TIMETOGRADUATE,
+                     "Dpt. of Public Administration", SOCIAL_MAJOR2_MAXSTUDENT, 9.0f, SOCIAL_MAJOR2_TIMETOGRADUATE);
+    Social->setPosition(Vec2(visibleSize.width * 0.75, visibleSize.height * 0.53));
+    this->addChild(Social);
+    
+    //College of Natural
+    Natural = College::setSpriteWithFile("CollegeZone.png");
+    Natural->setScale(Natural->getScale() * 1.2);
+    Natural->setNameOfCollege("College of Natural Science", 8.0f, NATURAL_UNLOCK, NATURAL_MONEYUNCLOCK, NATURAL_KNOWLEDGEUNLOCK);
+    Natural->setMajor("Mathematics Department", NATURAL_MAJOR1_MAXSTUDENT, 10.0f, NATURAL_MAJOR1_TIMETOGRADUATE,
+                      "Global Environnement Dpt.", NATURAL_MAJOR2_MAXSTUDENT, 10.0f, NATURAL_MAJOR2_TIMETOGRADUATE);
+    Natural->setPosition(Vec2(visibleSize.width * 0.35, visibleSize.height * 0.31));
+    this->addChild(Natural);
+    
+    // College of Music
+    Music = College::setSpriteWithFile("CollegeZone.png");
+    Music->setScale(Music->getScale() * 1.2);
+    Music->setNameOfCollege("College of Music and Perfoming Arts", 7.0f, MUSIC_UNLOCK, MUSIC_MONEYUNCLOCK, MUSIC_KNOWLEDGEUNLOCK);
+    Music->setMajor("Orchestral Instruments Dpt.", MUSIC_MAJOR1_MAXSTUDENT, 9.0f, MUSIC_MAJOR1_TIMETOGRADUATE,
+                    "Dance Department", MUSIC_MAJOR2_MAXSTUDENT, 12.0f, MUSIC_MAJOR2_TIMETOGRADUATE);
+    Music->setPosition(Vec2(visibleSize.width * 0.75, visibleSize.height * 0.31));
+    this->addChild(Music);
 
     // Play music
     auto audio = SimpleAudioEngine::getInstance();
@@ -263,4 +269,35 @@ void GameMain::StatisticMenu(Ref *pSender)
 
 void GameMain::ResetMenu(Ref *pSender)
 {
+    StudentBySec = STUDENTBYSEC_START;
+    Money = MONEY_START;
+    MoneyBySecond = MONEYBYSECOND_START;
+    Knowledge = KNOWLEDGE_START;
+    second = 0.f;
+    MoneyTmp = 0.f;
+    StudentTmp = 0.f;
+    Students.clear();
+    for (int i = 0 ; i < STUDENT_START; i++)
+    {
+        Student* stu = new Student();
+        Students.push_back(stu);
+    }
+    Engineering->Reset(ENGINEERING_UNLOCK, ENGINEERING_MONEYUNLOCK, ENGINEERING_KNOWLEDGEUNLOCK,
+                       ENGINEERING_MAJOR1_MAXSTUDENT, ENGINEERING_MAJOR1_TIMETOGRADUATE,
+                       ENGINEERING_MAJOR2_MAXSTUDENT, ENGINEERING_MAJOR2_TIMETOGRADUATE);
+    Medecine->Reset(MEDECINE_UNLOCK, MEDECINE_MONEYUNCLOCK, MEDECINE_KNOWLEDGEUNLOCK,
+                    MEDECINE_MAJOR1_MAXSTUDENT, MEDECINE_MAJOR1_TIMETOGRADUATE,
+                    MEDECINE_MAJOR2_MAXSTUDENT, MEDECINE_MAJOR2_TIMETOGRADUATE);
+    Education->Reset(EDUCATION_UNLOCK, EDUCATION_MONEYUNCLOCK, EDUCATION_KNOWLEDGEUNLOCK,
+                     EDUCATION_MAJOR1_MAXSTUDENT, EDUCATION_MAJOR1_TIMETOGRADUATE,
+                     EDUCATION_MAJOR2_MAXSTUDENT, EDUCATION_MAJOR2_TIMETOGRADUATE);
+    Social->Reset(SOCIAL_UNLOCK, SOCIAL_MONEYUNCLOCK, SOCIAL_KNOWLEDGEUNLOCK,
+                  SOCIAL_MAJOR1_MAXSTUDENT, SOCIAL_MAJOR1_TIMETOGRADUATE,
+                  SOCIAL_MAJOR2_MAXSTUDENT, SOCIAL_MAJOR2_TIMETOGRADUATE);
+    Natural->Reset(NATURAL_UNLOCK, NATURAL_MONEYUNCLOCK, NATURAL_KNOWLEDGEUNLOCK,
+                   NATURAL_MAJOR1_MAXSTUDENT, NATURAL_MAJOR1_TIMETOGRADUATE,
+                   NATURAL_MAJOR2_MAXSTUDENT, NATURAL_MAJOR2_TIMETOGRADUATE);
+    Music->Reset(MUSIC_UNLOCK, MUSIC_MONEYUNCLOCK, MUSIC_KNOWLEDGEUNLOCK,
+                 MUSIC_MAJOR1_MAXSTUDENT, MUSIC_MAJOR1_TIMETOGRADUATE,
+                 MUSIC_MAJOR2_MAXSTUDENT, MUSIC_MAJOR2_TIMETOGRADUATE);
 }

@@ -35,7 +35,7 @@ public:
 	void setTimeToGraduate(float time);
     void UpdateStudent(float dt);
 	virtual void update(float dt);
-
+    void Reset(int MaxStudent, float TimeToGraduate);
     int getNbStudent();
     
     Major(std::string, int);

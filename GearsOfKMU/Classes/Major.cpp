@@ -97,6 +97,13 @@ void Major::UpdateStudent(float dt)
     }
 }
 
+void Major::Reset(int MaxStudent, float TimeToGraduate)
+{
+    this->NbMaxStudent = MaxStudent;
+    this->TimeToGraduate = TimeToGraduate;
+    student.clear();
+}
+
 void Major::update(float dt)
 {
 	studentLabel->setString(std::to_string((int)student.size()) + "/" + std::to_string(NbMaxStudent));
