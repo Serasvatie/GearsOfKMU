@@ -47,7 +47,7 @@ bool GameMain::init()
 	second = 0.f;
 	MoneyTmp = 0.f;
 	StudentTmp = 0.f;
-    for (int i = 0 ; i < 10 ; i++)
+    for (int i = 0 ; i < STUDENT_START; i++)
     {
         Student* stu = new Student();
         Students.push_back(stu);
@@ -178,7 +178,7 @@ void GameMain::updateRessources()
     /*
     ** Update money
     */
-    MoneyBySecond = getNbStudentInEachCollege() + MONEYBYSECOND_START;
+    MoneyBySecond = (getNbStudentInEachCollege() * MONEY_FOR_EACH_STUDENT) + MONEYBYSECOND_START;
     MoneyTmp += MoneyBySecond;
     Money += (int)MoneyTmp;
     MoneyTmp -= (int)MoneyTmp;
