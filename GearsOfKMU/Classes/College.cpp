@@ -83,7 +83,10 @@ void College::Unlock(Ref *pSender)
             one->Button->resume();
             two->Button->resume();
             unlock = true;
+            
+            CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("clickbutton.mp3", false, 1.0f, 1.0f, 1.0f);
         }
+        CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("invalid.mp3", false, 1.0f, 1.0f, 1.0f);
     }
 }
 

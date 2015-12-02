@@ -5,6 +5,7 @@
 #include "Student.h"
 #include "College.h"
 #include "UI.h"
+#include "SimpleAudioEngine.h"
 
 #define STUDENTBYSEC_START 0.1f
 #define MONEY_START 10
@@ -13,6 +14,8 @@
 #define STUDENT_START 10
 
 #define MONEY_FOR_EACH_STUDENT 0.5f
+
+#define BACKGROUND_MUSIC_VOLUME 0.1
 
 class GameMain : public cocos2d::Layer
 {

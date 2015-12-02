@@ -58,6 +58,9 @@
 		521A8EAA19F11F5000D177D7 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 521A8EA819F11F5000D177D7 /* fonts */; };
 		52B47A471A53D09C004E4C60 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52B47A461A53D09B004E4C60 /* Security.framework */; };
 		8262943E1AAF051F00CB7CF7 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8262943D1AAF051F00CB7CF7 /* Security.framework */; };
+		84A9803D1C0EB06800FA4AC7 /* Background.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 84A9803C1C0EB06800FA4AC7 /* Background.mp3 */; };
+		84A980401C0EB4C200FA4AC7 /* clickbutton.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 84A9803F1C0EB4C200FA4AC7 /* clickbutton.mp3 */; };
+		84A980421C0EB4C700FA4AC7 /* invalid.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 84A980411C0EB4C700FA4AC7 /* invalid.mp3 */; };
 		84AC2AD91C0C2098009ACD20 /* LockCollegeZone.png in Resources */ = {isa = PBXBuildFile; fileRef = 84AC2AD81C0C2098009ACD20 /* LockCollegeZone.png */; };
 		84AF78841C056DA900FECEC4 /* MainGate.png in Resources */ = {isa = PBXBuildFile; fileRef = 84AF78831C056DA900FECEC4 /* MainGate.png */; };
 		84D763901BFD83E8002F3CEE /* Button Reset Normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 84D763891BFD83E8002F3CEE /* Button Reset Normal.png */; };
@@ -171,6 +174,9 @@
 		521A8EA819F11F5000D177D7 /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fonts; sourceTree = "<group>"; };
 		52B47A461A53D09B004E4C60 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.1.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
 		8262943D1AAF051F00CB7CF7 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		84A9803C1C0EB06800FA4AC7 /* Background.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Background.mp3; sourceTree = "<group>"; };
+		84A9803F1C0EB4C200FA4AC7 /* clickbutton.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = clickbutton.mp3; sourceTree = "<group>"; };
+		84A980411C0EB4C700FA4AC7 /* invalid.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = invalid.mp3; sourceTree = "<group>"; };
 		84AC2AD81C0C2098009ACD20 /* LockCollegeZone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LockCollegeZone.png; sourceTree = "<group>"; };
 		84AF78831C056DA900FECEC4 /* MainGate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MainGate.png; sourceTree = "<group>"; };
 		84D763891BFD83E8002F3CEE /* Button Reset Normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Button Reset Normal.png"; sourceTree = "<group>"; };
@@ -327,6 +333,9 @@
 		46880B7519C43A67006E1F66 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				84A980411C0EB4C700FA4AC7 /* invalid.mp3 */,
+				84A9803F1C0EB4C200FA4AC7 /* clickbutton.mp3 */,
+				84A9803C1C0EB06800FA4AC7 /* Background.mp3 */,
 				84AC2AD81C0C2098009ACD20 /* LockCollegeZone.png */,
 				84E323CD1C06921E006C0FC4 /* CollegeZone.png */,
 				84AF78831C056DA900FECEC4 /* MainGate.png */,
@@ -530,6 +539,7 @@
 				84D763931BFD83E8002F3CEE /* Button StatisticNormal.png in Resources */,
 				5087E78317EB970100C73F5D /* Icon-152.png in Resources */,
 				46880B8119C43A67006E1F66 /* HelloWorld.png in Resources */,
+				84A9803D1C0EB06800FA4AC7 /* Background.mp3 in Resources */,
 				46880B7D19C43A67006E1F66 /* CloseSelected.png in Resources */,
 				5087E77D17EB970100C73F5D /* Default-568h@2x.png in Resources */,
 				5087E78517EB970100C73F5D /* Icon-72.png in Resources */,
@@ -543,6 +553,7 @@
 				50EF629617ECD46A001EB2F8 /* Icon-40.png in Resources */,
 				84AC2AD91C0C2098009ACD20 /* LockCollegeZone.png in Resources */,
 				5087E78217EB970100C73F5D /* Icon-144.png in Resources */,
+				84A980421C0EB4C700FA4AC7 /* invalid.mp3 in Resources */,
 				84EC67141BFE9B43001FC773 /* MoneyZone.png in Resources */,
 				3EACC98F19EE6D4300EB3C5E /* res in Resources */,
 				50EF629817ECD46A001EB2F8 /* Icon-80.png in Resources */,
@@ -550,6 +561,7 @@
 				84D763921BFD83E8002F3CEE /* Button Statistic Selected.png in Resources */,
 				84D763941BFD83E8002F3CEE /* Button Upgrade Normal.png in Resources */,
 				84EC67151BFE9B43001FC773 /* Plus Button.png in Resources */,
+				84A980401C0EB4C200FA4AC7 /* clickbutton.mp3 in Resources */,
 				5087E78417EB970100C73F5D /* Icon-57.png in Resources */,
 				5087E77E17EB970100C73F5D /* Default.png in Resources */,
 				84D763911BFD83E8002F3CEE /* Button Reset Selected.png in Resources */,

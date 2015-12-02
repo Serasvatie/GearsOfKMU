@@ -62,15 +62,18 @@ void Major::AddStudent(Ref *pSender)
 	GameMain* layer = (GameMain*)tmp->getChildren().at(1);
 	if (layer != NULL)
 	{
-		if ((int)student.size() >= NbMaxStudent)
-			return;
-		if (layer->Students.size() <= 0)
-			return;
+		if ((int)student.size() >= NbMaxStudent || layer->Students.size() <= 0)
+        {
+            CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("invalid.mp3", false, 1.0f, 1.0f, 1.0f);
+            return;
+        }
 		Student* stu = layer->Students.front();
 		stu->startStudy = true;
 		stu->setTimeToGraduate(TimeToGraduate);
 		student.push_back(stu);
 		layer->Students.pop_front();
+        
+        CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("clickbutton.mp3", false, 1.0f, 1.0f, 1.0f);
 	}
 }
 

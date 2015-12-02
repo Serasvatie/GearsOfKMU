@@ -1,5 +1,7 @@
 #include "GameMain.h"
 
+using namespace CocosDenshion;
+
 USING_NS_CC;
 
 GameMain::GameMain()
@@ -149,6 +151,11 @@ bool GameMain::init()
 	Music->setPosition(Vec2(visibleSize.width * 0.75, visibleSize.height * 0.31));
 	this->addChild(Music);
 
+    // Play music
+    auto audio = SimpleAudioEngine::getInstance();
+    audio->playBackgroundMusic("Background.mp3", true);
+    audio->setBackgroundMusicVolume(BACKGROUND_MUSIC_VOLUME);
+    
 	this->scheduleUpdate();
     
     return true;
@@ -235,10 +242,17 @@ void GameMain::AddKnowledge(int addvalue)
 
 void GameMain::UpgradeMenu(Ref *pSender)
 {
+    auto audio = SimpleAudioEngine::getInstance();
+    
     if (Money >= 50)
     {
+        audio->playEffect("clickbutton.mp3", false, 1.0f, 1.0f, 1.0f);
         StudentBySec += 0.1f;
         Money -= 50;
+    }
+    else
+    {
+        audio->playEffect("invalid.mp3", false, 1.0f, 1.0f, 1.0f);
     }
 }
 
@@ -249,5 +263,4 @@ void GameMain::StatisticMenu(Ref *pSender)
 
 void GameMain::ResetMenu(Ref *pSender)
 {
-    
 }
