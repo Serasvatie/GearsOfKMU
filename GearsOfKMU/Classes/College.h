@@ -27,6 +27,8 @@ class College : public cocos2d::Sprite
     void setMajor(std::string, int, float, float timeOne, std::string, int, float, float timeSecond);
 	virtual void update(float dt);
 
+    int getNumberOfStudents();
+    
 	College();
 	~College();	
 };

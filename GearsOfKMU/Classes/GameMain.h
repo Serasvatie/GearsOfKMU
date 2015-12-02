@@ -6,6 +6,11 @@
 #include "College.h"
 #include "UI.h"
 
+#define STUDENTBYSEC_START 0.1f;
+#define MONEY_START 10;
+#define MONEYBYSECOND_START 2;
+#define KNOWLEDGE_START 0;
+
 class GameMain : public cocos2d::Layer
 {
 private:
@@ -56,6 +61,7 @@ public:
     virtual void update (float dt);
 
 	void AddKnowledge(int addvalue);
+    int getNbStudentInEachCollege();
     
     // implement the "static create()" method manually
     CREATE_FUNC(GameMain);

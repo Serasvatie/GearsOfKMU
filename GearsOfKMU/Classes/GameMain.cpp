@@ -40,10 +40,10 @@ bool GameMain::init()
     /*
     ** Initialize Ressources
     */
-    StudentBySec = 0.1f;
-    Money = 10;
-    MoneyBySecond = 1.5;
-	Knowledge = 0;
+    StudentBySec = STUDENTBYSEC_START;
+    Money = MONEY_START;
+    MoneyBySecond = MONEYBYSECOND_START;
+	Knowledge = KNOWLEDGE_START;
 	second = 0.f;
 	MoneyTmp = 0.f;
 	StudentTmp = 0.f;
@@ -159,11 +159,26 @@ bool GameMain::onTouchBegan(Touch *touch, Event *event)
     return true;
 }
 
+int GameMain::getNbStudentInEachCollege()
+{
+    int ret;
+    
+   	ret = Medecine->getNumberOfStudents();
+    ret += Engineering->getNumberOfStudents();
+    ret += Education->getNumberOfStudents();
+    ret += Social->getNumberOfStudents();
+    ret += Natural->getNumberOfStudents();
+    ret += Music->getNumberOfStudents();
+    
+    return ret;
+}
+
 void GameMain::updateRessources()
 {
     /*
     ** Update money
     */
+    MoneyBySecond = getNbStudentInEachCollege() + MONEYBYSECOND_START;
     MoneyTmp += MoneyBySecond;
     Money += (int)MoneyTmp;
     MoneyTmp -= (int)MoneyTmp;
@@ -220,7 +235,11 @@ void GameMain::AddKnowledge(int addvalue)
 
 void GameMain::UpgradeMenu(Ref *pSender)
 {
-    
+    if (Money >= 50)
+    {
+        StudentBySec += 0.1f;
+        Money -= 50;
+    }
 }
 
 void GameMain::StatisticMenu(Ref *pSender)

@@ -94,3 +94,8 @@ void Major::update(float dt)
 		
 	}
 }
+
+int Major::getNbStudent()
+{
+    return ((int)student.size());
+}

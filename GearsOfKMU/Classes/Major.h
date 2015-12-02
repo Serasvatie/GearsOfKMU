@@ -35,6 +35,8 @@ public:
 	void setTimeToGraduate(float time);
 	virtual void update(float dt);
 
+    int getNbStudent();
+    
     Major(std::string, int);
 	~Major();
 };

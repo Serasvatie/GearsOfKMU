@@ -96,3 +96,12 @@ void College::update(float dt)
     }
 }
 
+int College::getNumberOfStudents()
+{
+    int ret;
+    
+    ret = one->getNbStudent();
+    ret += two->getNbStudent();
+    
+    return ret;
+}
