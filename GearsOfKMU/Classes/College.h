@@ -5,6 +5,8 @@
 #include "Major.h"
 #include "cocos2d.h"
 
+#define TXT_POPUP "Not enough "
+
 class College : public cocos2d::Sprite
 {
 	private:
@@ -17,7 +19,8 @@ class College : public cocos2d::Sprite
     cocos2d::Menu* Lock;
     cocos2d::Label* LabelMoney;
     cocos2d::Label* LabelKnowledge;
-    
+	cocos2d::Label* Popup;
+	cocos2d::Sequence* PopupSequence;
 	public:
 	
 	static College* setSpriteWithFile(const char * file);

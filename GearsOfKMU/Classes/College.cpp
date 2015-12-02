@@ -7,7 +7,9 @@ College::College()
 {}
 
 College::~College()
-{}
+{
+	CC_SAFE_RELEASE(PopupSequence);
+}
 
 College* College::setSpriteWithFile(const char *file)
 {
@@ -20,6 +22,10 @@ College* College::setSpriteWithFile(const char *file)
     return sprite = nullptr;
 }
 
+
+/*
+** Set Position of the class before calling this function
+*/
 void College::setNameOfCollege(std::string name, float size, bool unlock, int moneyToUnlock, int knowloedgeToUnlock)
 {
     this->name = name;
@@ -29,6 +35,20 @@ void College::setNameOfCollege(std::string name, float size, bool unlock, int mo
     this->MoneyToUnlock = moneyToUnlock;
     this->KnowledgeToUnlock = knowloedgeToUnlock;
     this->addChild(Name);
+
+	auto visibleSize = cocos2d::Director::getInstance()->getVisibleSize();
+	Popup = cocos2d::Label::createWithTTF(TXT_POPUP, "fonts/arial.ttf", 13.0f);
+	Popup->setColor(cocos2d::Color3B(247, 35, 35));
+	Popup->setPosition(cocos2d::Vec2(60, 25));
+	//Popup->setAnchorPoint(cocos2d::Vec2(this->getPosition().x * -1, -this->getPosition().y * -1));
+	//Popup->setPosition(visibleSize.width * 0.5, visibleSize.height * 0.75);
+	Popup->setOpacity(0);
+
+	PopupSequence = cocos2d::Sequence::create(cocos2d::FadeIn::create(0.5f),
+		cocos2d::DelayTime::create(2.0f),
+		cocos2d::FadeOut::create(0.5f),
+		nullptr);
+	PopupSequence->retain();
 }
 
 void College::setMajor(std::string majorOneName, int maxStudentOne, float sizeOne, float timeOne, std::string majorTwoName, int maxStudentSecond, float sizeSecond, float timeSecond)
@@ -53,7 +73,7 @@ void College::setMajor(std::string majorOneName, int maxStudentOne, float sizeOn
     {
         one->Button->pause();
         two->Button->pause();
-        auto but = cocos2d::MenuItemImage::create("LockCollegeZone.png", "LockCllegeZone.png", CC_CALLBACK_1(College::Unlock, this));
+        auto but = cocos2d::MenuItemImage::create("LockCollegeZone.png", "LockCollegeZone.png", CC_CALLBACK_1(College::Unlock, this));
         but->setPosition(cocos2d::Vec2(this->getContentSize().width * 0.5, this->getContentSize().height * 0.5));
         Lock = cocos2d::Menu::create(but, NULL);
         Lock->setPosition(cocos2d::Vec2::ZERO);
@@ -65,6 +85,7 @@ void College::setMajor(std::string majorOneName, int maxStudentOne, float sizeOn
         this->addChild(LabelMoney);
         this->addChild(LabelKnowledge);
     }
+	this->addChild(Popup);
 }
 
 void College::Unlock(Ref *pSender)
@@ -86,6 +107,14 @@ void College::Unlock(Ref *pSender)
             
             CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("clickbutton.mp3", false, 1.0f, 1.0f, 1.0f);
         }
+		std::stringstream os;
+		os << TXT_POPUP;
+		if (layer->Money < this->MoneyToUnlock)
+			os << "money.";
+		else
+			os << "knowledge.";
+		Popup->setString(os.str());
+		Popup->runAction(PopupSequence->clone());
         CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("invalid.mp3", false, 1.0f, 1.0f, 1.0f);
     }
 }
