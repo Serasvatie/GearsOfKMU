@@ -7,6 +7,7 @@ Major::Major(std::string name, int student)
     NbMaxStudent = student;
     this->name = name;
 	this->setOpacity(255);
+    this->schedule(schedule_selector(Major::UpdateStudent),1.0f);
 }
 
 Major::~Major()
@@ -73,26 +74,29 @@ void Major::AddStudent(Ref *pSender)
 	}
 }
 
+void Major::UpdateStudent(float dt)
+{
+   	std::list<Student*>::iterator it = student.begin();
+    while (it != student.end())
+    {
+        if ((*it)->updateTime(dt) == true)
+        {
+            auto tmp = cocos2d::Director::getInstance()->getRunningScene();
+            GameMain* layer = (GameMain*)tmp->getChildren().at(1);
+            if (layer != NULL)
+            {
+                layer->AddKnowledge(1);
+            }
+            it = student.erase(it);
+        }
+        else
+            ++it;
+    }
+}
+
 void Major::update(float dt)
 {
 	studentLabel->setString(std::to_string((int)student.size()) + "/" + std::to_string(NbMaxStudent));
-	std::list<Student*>::iterator it = student.begin();
-	while (it != student.end())
-	{
-		if ((*it)->updateTime(dt) == true)
-		{
-			auto tmp = cocos2d::Director::getInstance()->getRunningScene();
-			GameMain* layer = (GameMain*)tmp->getChildren().at(1);
-			if (layer != NULL)
-			{
-				layer->AddKnowledge(1);
-			}
-			it = student.erase(it);
-		}
-		else
-			++it;
-		
-	}
 }
 
 int Major::getNbStudent()

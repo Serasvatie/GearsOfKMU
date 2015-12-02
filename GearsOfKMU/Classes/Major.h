@@ -33,6 +33,7 @@ public:
     cocos2d::Label* setLabelStudent(std::string, float);
     cocos2d::Menu* setAddSprite();
 	void setTimeToGraduate(float time);
+    void UpdateStudent(float dt);
 	virtual void update(float dt);
 
     int getNbStudent();
