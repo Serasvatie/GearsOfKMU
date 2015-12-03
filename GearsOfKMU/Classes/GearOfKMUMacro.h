@@ -9,7 +9,7 @@
 #ifndef GearsOfKMU_GearOfKMUMacro_h
 #define GearsOfKMU_GearOfKMUMacro_h
 
-#define BACKGROUND_MUSIC_VOLUME 0.1
+#define BACKGROUND_MUSIC_VOLUME 0.1f
 
 #define STUDENTBYSEC_START 0.1f
 #define MONEY_START 10
