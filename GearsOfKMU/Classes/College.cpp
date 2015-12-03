@@ -36,14 +36,11 @@ void College::setNameOfCollege(std::string name, float size, bool unlock, int mo
     this->KnowledgeToUnlock = knowloedgeToUnlock;
     this->addChild(Name);
 
-	auto visibleSize = cocos2d::Director::getInstance()->getVisibleSize();
 	Popup = cocos2d::Label::createWithTTF(TXT_POPUP, "fonts/arial.ttf", 13.0f);
 	Popup->setColor(cocos2d::Color3B(247, 35, 35));
 	Popup->setPosition(cocos2d::Vec2(60, 25));
-	//Popup->setAnchorPoint(cocos2d::Vec2(this->getPosition().x * -1, -this->getPosition().y * -1));
-	//Popup->setPosition(visibleSize.width * 0.5, visibleSize.height * 0.75);
 	Popup->setOpacity(0);
-
+	this->addChild(Popup, 5);
 	PopupSequence = cocos2d::Sequence::create(cocos2d::FadeIn::create(0.5f),
 		cocos2d::DelayTime::create(2.0f),
 		cocos2d::FadeOut::create(0.5f),
@@ -85,7 +82,6 @@ void College::setMajor(std::string majorOneName, int maxStudentOne, float sizeOn
         this->addChild(LabelMoney);
         this->addChild(LabelKnowledge);
     }
-	this->addChild(Popup);
 }
 
 void College::Unlock(Ref *pSender)
@@ -106,6 +102,7 @@ void College::Unlock(Ref *pSender)
             unlock = true;
             
             CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("clickbutton.mp3", false, 1.0f, 1.0f, 1.0f);
+            return ;
         }
 		std::stringstream os;
 		os << TXT_POPUP;

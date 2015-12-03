@@ -12,6 +12,8 @@ Major::Major(std::string name, int student)
 
 Major::~Major()
 {
+    CC_SAFE_RELEASE(GraduateLabel);
+    CC_SAFE_RELEASE(GraduateSequence);
 }
 
 Major* Major::setSprite(std::string name, int maxStudent)
@@ -53,6 +55,20 @@ cocos2d::Label* Major::setLabelStudent(std::string font, float size)
     this->studentLabel = cocos2d::Label::createWithTTF(std::to_string((int)student.size()) + "/" + std::to_string(NbMaxStudent), font, size);
     studentLabel->setPosition(cocos2d::Vec2(13, 0));
     this->addChild(studentLabel);
+    
+    this->GraduateLabel = cocos2d::Label::createWithTTF("", font, size * 2.0f);
+    GraduateLabel->setPosition(cocos2d::Vec2(13,0));
+    GraduateLabel->setOpacity(0);
+    GraduateLabel->setColor(cocos2d::Color3B(28, 220, 73));
+    this->addChild(GraduateLabel,5);
+    
+    MoveTo = cocos2d::MoveBy::create(2.0f, cocos2d::Vec2(0, 20));
+    MoveTo->retain();
+    GraduateSequence = cocos2d::Sequence::create(cocos2d::FadeIn::create(0.5f),
+                                                 cocos2d::DelayTime::create(0.5f),
+                                                 cocos2d::FadeOut::create(0.5f),
+                                                 nullptr);
+    GraduateSequence->retain();
     return this->studentLabel;
 }
 
@@ -79,6 +95,7 @@ void Major::AddStudent(Ref *pSender)
 
 void Major::UpdateStudent(float dt)
 {
+    int nbGraduate = 0;
    	std::list<Student*>::iterator it = student.begin();
     while (it != student.end())
     {
@@ -91,9 +108,17 @@ void Major::UpdateStudent(float dt)
                 layer->AddKnowledge(1);
             }
             it = student.erase(it);
+            nbGraduate++;
         }
         else
             ++it;
+    }
+    if (nbGraduate > 0)
+    {
+        GraduateLabel->setString("+" + std::to_string(nbGraduate));
+        GraduateLabel->runAction(MoveTo->clone());
+        GraduateLabel->runAction(GraduateSequence->clone());
+        GraduateLabel->setPosition(cocos2d::Vec2(13,0));
     }
 }
 

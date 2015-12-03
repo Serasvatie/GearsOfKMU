@@ -22,6 +22,9 @@ private:
 	std::string name;
     
 	cocos2d::Label* studentLabel;
+    cocos2d::Label* GraduateLabel;
+    cocos2d::Sequence* GraduateSequence;
+    cocos2d::Action* MoveTo;
 
 public:
 	
