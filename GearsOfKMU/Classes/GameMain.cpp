@@ -90,19 +90,19 @@ bool GameMain::init()
 	//UI Student
 	NBStudent = UI::setSpriteWithFile("StudentZone.png");
 	NBStudent->setPosition(Vec2(origin.x + visibleSize.width * 0.30, visibleSize.height - 15));
-	NBStudent->setLabelFirst("0", "fonts/arial.ttf", 17.0f);
-	NBStudent->setLabelSecond("0", "fonts/arial.ttf", 12.0f);
+	NBStudent->setLabelFirst("0", FONT, 20.0f);
+	NBStudent->setLabelSecond("0", FONT, 13.0f);
 	this->addChild(NBStudent,0);
 	//UI Money
 	NBMoney = UI::setSpriteWithFile("MoneyZone.png");
 	NBMoney->setPosition(Vec2(origin.x + visibleSize.width * 0.55, visibleSize.height - 15));
-	NBMoney->setLabelFirst("0", "fonts/arial.ttf", 17.0f);
-	NBMoney->setLabelSecond("0", "fonts/arial.ttf", 12.0f);
+	NBMoney->setLabelFirst("0", FONT, 20.0f);
+	NBMoney->setLabelSecond("0", FONT, 13.0f);
 	this->addChild(NBMoney,0);
 	//UI Knowledge
 	NBKnowledge = UI::setSpriteWithFile("KnowledgeZone.png");
 	NBKnowledge->setPosition(Vec2(origin.x + visibleSize.width * 0.80, visibleSize.height - 15));
-	NBKnowledge->setLabelFirst("0", "fonts/arial.ttf", 17.0f);
+	NBKnowledge->setLabelFirst("0", FONT, 20.0f);
 	this->addChild(NBKnowledge,0);
 	
 	//College of Engineering

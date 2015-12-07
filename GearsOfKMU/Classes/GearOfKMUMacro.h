@@ -10,6 +10,7 @@
 #define GearsOfKMU_GearOfKMUMacro_h
 
 #define BACKGROUND_MUSIC_VOLUME 0.1f
+#define FONT "fonts/forte.ttf"
 
 #define STUDENTBYSEC_START 0.1f
 #define MONEY_START 10

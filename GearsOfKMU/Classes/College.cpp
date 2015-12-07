@@ -29,14 +29,14 @@ College* College::setSpriteWithFile(const char *file)
 void College::setNameOfCollege(std::string name, float size, bool unlock, int moneyToUnlock, int knowloedgeToUnlock)
 {
 	this->name = name;
-	auto Name = cocos2d::Label::createWithTTF(this->name, "fonts/arial.ttf", size);
+	auto Name = cocos2d::Label::createWithTTF(this->name, FONT, size);
 	Name->setPosition(cocos2d::Vec2(60, 38));
 	this->unlock = unlock;
 	this->MoneyToUnlock = moneyToUnlock;
 	this->KnowledgeToUnlock = knowloedgeToUnlock;
 	this->addChild(Name);
 
-	Popup = cocos2d::Label::createWithTTF(TXT_POPUP, "fonts/arial.ttf", 13.0f);
+	Popup = cocos2d::Label::createWithTTF(TXT_POPUP, FONT, 13.0f);
 	Popup->setColor(cocos2d::Color3B(247, 35, 35));
 	Popup->setPosition(cocos2d::Vec2(60, 25));
 	Popup->setOpacity(0);
@@ -52,16 +52,16 @@ void College::setMajor(std::string majorOneName, int maxStudentOne, float sizeOn
 {
 	one = Major::setSprite(majorOneName, maxStudentOne);
 	one->setAddSprite();
-	one->setLabelName("fonts/arial.ttf", sizeOne);
-	one->setLabelStudent("fonts/arial.ttf", 11.0f);
+	one->setLabelName(FONT, sizeOne);
+	one->setLabelStudent(FONT, 11.0f);
 	one->setTimeToGraduate(timeOne);
 	one->setPosition(cocos2d::Vec2(80, 25));
 	one->setScale(one->getScale() * 0.65);
 	this->addChild(one);
 	two = Major::setSprite(majorTwoName, maxStudentSecond);
 	two->setAddSprite();
-	two->setLabelName("fonts/arial.ttf", sizeSecond);
-	two->setLabelStudent("fonts/arial.ttf", 11.0f);
+	two->setLabelName(FONT, sizeSecond);
+	two->setLabelStudent(FONT, 11.0f);
 	two->setTimeToGraduate(timeSecond);
 	two->setPosition(cocos2d::Vec2(80, 10));
 	two->setScale(two->getScale() * 0.65);
@@ -75,8 +75,8 @@ void College::setMajor(std::string majorOneName, int maxStudentOne, float sizeOn
 		Lock = cocos2d::Menu::create(but, NULL);
 		Lock->setPosition(cocos2d::Vec2::ZERO);
 		this->addChild(Lock, 0);
-		LabelMoney = cocos2d::Label::createWithTTF(std::to_string(MoneyToUnlock), "fonts/arial.ttf", 11.0f);
-		LabelKnowledge = cocos2d::Label::createWithTTF(std::to_string(KnowledgeToUnlock), "fonts/arial.ttf", 11.0f);
+		LabelMoney = cocos2d::Label::createWithTTF(std::to_string(MoneyToUnlock), FONT, 11.0f);
+		LabelKnowledge = cocos2d::Label::createWithTTF(std::to_string(KnowledgeToUnlock), FONT, 11.0f);
 		LabelMoney->setPosition(cocos2d::Vec2(50, 35));
 		LabelKnowledge->setPosition(cocos2d::Vec2(50, 15));
 		this->addChild(LabelMoney);

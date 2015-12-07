@@ -37,7 +37,7 @@ bool ResetLayer::init()
 	this->setColor(cocos2d::Color3B(100, 100, 100));
 	this->setPosition(cocos2d::Vec2(initialPos.x, initialPos.y));
 
-	txt = cocos2d::Label::createWithTTF("Are you sure you want to reset ?", "fonts/arial.ttf", 20.0f);
+	txt = cocos2d::Label::createWithTTF("Are you sure you want to reset ?", FONT, 20.0f);
 	txt->setPosition(cocos2d::Vec2(visibleSize.width * 0.5f, visibleSize.height * 0.7f));
 	this->addChild(txt);
 	
