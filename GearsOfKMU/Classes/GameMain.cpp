@@ -201,6 +201,8 @@ void GameMain::updateRessources()
 	/*
 	** Update student
 	*/
+    if (Students.size() >= STUDENTLIMIT)
+        return ;
 	StudentTmp += StudentBySec;
 	while (StudentTmp >= 1.f)
 	{
