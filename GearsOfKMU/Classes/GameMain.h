@@ -7,7 +7,11 @@
 #include "UI.h"
 #include "GearOfKMUMacro.h"
 #include "SimpleAudioEngine.h"
+<<<<<<< Updated upstream
 #include "ResetLayer.h"
+=======
+#include "UpgradeLayer.h"
+>>>>>>> Stashed changes
 
 class GameMain : public cocos2d::Layer
 {

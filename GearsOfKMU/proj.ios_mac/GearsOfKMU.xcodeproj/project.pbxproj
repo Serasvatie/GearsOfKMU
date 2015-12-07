@@ -64,6 +64,7 @@
 		84A9803D1C0EB06800FA4AC7 /* Background.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 84A9803C1C0EB06800FA4AC7 /* Background.mp3 */; };
 		84A980401C0EB4C200FA4AC7 /* clickbutton.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 84A9803F1C0EB4C200FA4AC7 /* clickbutton.mp3 */; };
 		84A980421C0EB4C700FA4AC7 /* invalid.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 84A980411C0EB4C700FA4AC7 /* invalid.mp3 */; };
+		84AAE6F51C0FCED900513CF8 /* UpgradeLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84AAE6F31C0FCED900513CF8 /* UpgradeLayer.cpp */; };
 		84AC2AD91C0C2098009ACD20 /* LockCollegeZone.png in Resources */ = {isa = PBXBuildFile; fileRef = 84AC2AD81C0C2098009ACD20 /* LockCollegeZone.png */; };
 		84AF78841C056DA900FECEC4 /* MainGate.png in Resources */ = {isa = PBXBuildFile; fileRef = 84AF78831C056DA900FECEC4 /* MainGate.png */; };
 		84D763901BFD83E8002F3CEE /* Button Reset Normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 84D763891BFD83E8002F3CEE /* Button Reset Normal.png */; };
@@ -185,6 +186,8 @@
 		84A9803C1C0EB06800FA4AC7 /* Background.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Background.mp3; sourceTree = "<group>"; };
 		84A9803F1C0EB4C200FA4AC7 /* clickbutton.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = clickbutton.mp3; sourceTree = "<group>"; };
 		84A980411C0EB4C700FA4AC7 /* invalid.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = invalid.mp3; sourceTree = "<group>"; };
+		84AAE6F31C0FCED900513CF8 /* UpgradeLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = UpgradeLayer.cpp; sourceTree = "<group>"; };
+		84AAE6F41C0FCED900513CF8 /* UpgradeLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpgradeLayer.h; sourceTree = "<group>"; };
 		84AC2AD81C0C2098009ACD20 /* LockCollegeZone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LockCollegeZone.png; sourceTree = "<group>"; };
 		84AF78831C056DA900FECEC4 /* MainGate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MainGate.png; sourceTree = "<group>"; };
 		84D763891BFD83E8002F3CEE /* Button Reset Normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Button Reset Normal.png"; sourceTree = "<group>"; };
@@ -388,8 +391,13 @@
 				84FFDD941C02DD7600889B90 /* UI.h */,
 				46880B8419C43A87006E1F66 /* AppDelegate.cpp */,
 				46880B8519C43A87006E1F66 /* AppDelegate.h */,
+<<<<<<< Updated upstream
 				84026D071C0FC86E00FC06A2 /* ResetLayer.cpp */,
 				84026D081C0FC86E00FC06A2 /* ResetLayer.h */,
+=======
+				84AAE6F31C0FCED900513CF8 /* UpgradeLayer.cpp */,
+				84AAE6F41C0FCED900513CF8 /* UpgradeLayer.h */,
+>>>>>>> Stashed changes
 			);
 			name = Classes;
 			path = ../Classes;
@@ -616,6 +624,7 @@
 				84FFDD9A1C02DD7600889B90 /* UI.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
 				84FFDD951C02DD7600889B90 /* College.cpp in Sources */,
+				84AAE6F51C0FCED900513CF8 /* UpgradeLayer.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

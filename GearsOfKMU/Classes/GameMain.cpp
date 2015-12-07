@@ -14,12 +14,25 @@ GameMain::~GameMain()
 
 Scene* GameMain::createScene()
 {
+<<<<<<< Updated upstream
 	// 'scene' is an autorelease object
 	auto scene = Scene::create();
 	
 	// 'layer' is an autorelease object
 	auto layer = GameMain::create();
 	layer->ResetLay = ResetLayer::create();
+=======
+    // 'scene' is an autorelease object
+    auto scene = Scene::create();
+    
+    // 'layer' is an autorelease object
+    auto layer = GameMain::create();
+    auto layerUpgrade = UpgradeLayer::create();
+
+    // add layer as a child to scene
+    scene->addChild(layer, 0);
+    scene->addChild(layerUpgrade, 1);
+>>>>>>> Stashed changes
 
 	// add layer as a child to scene
 	scene->addChild(layer);
@@ -57,6 +70,7 @@ bool GameMain::init()
 		Students.push_back(stu);
 	}
 
+<<<<<<< Updated upstream
 	/*
 	** Create UI
 	*/
@@ -78,6 +92,29 @@ bool GameMain::init()
 	auto Upgrade = Menu::create(upgrade, NULL);
 	Upgrade->setPosition(Vec2::ZERO);
 	this->addChild(Upgrade, 0);
+=======
+    /*
+    ** Create UI
+    */
+    // Background
+    background = Sprite::create("MainGate.png");
+    background->setScale(background->getScale() * 2.f); 
+    background->setPosition(Vec2(origin.x + background->getContentSize().width / 2, origin.y + background->getContentSize().height / 2));
+    this->addChild(background);
+    
+    // KMU Logo
+    logo = Sprite::create("logo.png");
+    logo->setPosition(Vec2(origin.x + logo->getContentSize().width - 30, origin.y + visibleSize.height - 50));
+    this->addChild(logo);
+    
+    // Upgrade button
+    auto upgrade = MenuItemImage::create( "Button Upgrade Normal.png", "Button Upgrade Selected.png", CC_CALLBACK_1(GameMain::UpgradeMenu, this));
+    upgrade->setPosition(Vec2(origin.x + upgrade->getContentSize().width + 15, origin.y + visibleSize.height * 0.5));
+    upgrade->setScale(upgrade->getScale() * 2.0f);
+    auto Upgrade = Menu::create(upgrade, NULL);
+    Upgrade->setPosition(Vec2::ZERO);
+    this->addChild(Upgrade, 0);
+>>>>>>> Stashed changes
 
 	//ResetButton
 	auto reset = MenuItemImage::create("Button Reset Normal.png", "Button Reset Selected.png", CC_CALLBACK_1(GameMain::ResetMenu, this));
