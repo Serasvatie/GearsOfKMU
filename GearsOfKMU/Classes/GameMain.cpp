@@ -81,7 +81,7 @@ bool GameMain::init()
 
 	//ResetButton
 	auto reset = MenuItemImage::create("Button Reset Normal.png", "Button Reset Selected.png", CC_CALLBACK_1(GameMain::ResetMenu, this));
-	reset->setPosition(Vec2(origin.x + reset->getContentSize().width + 15, origin.y + visibleSize.height * 0.2));
+	reset->setPosition(Vec2(origin.x + reset->getContentSize().width + 15, origin.y + visibleSize.height * 0.35));
 	reset->setScale(reset->getScale() * 2.0f);
 	auto Reset = Menu::create(reset, NULL);
 	Reset->setPosition(Vec2::ZERO);
