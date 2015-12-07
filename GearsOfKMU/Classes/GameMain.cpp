@@ -266,11 +266,6 @@ void GameMain::UpgradeMenu(Ref *pSender)
 	}
 }
 
-void GameMain::StatisticMenu(Ref *pSender)
-{
-
-}
-
 void GameMain::ResetMenu(Ref *pSender)
 {
 	ResetLay->Show();
